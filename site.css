@@ -445,6 +445,14 @@ a {
   background: var(--deep);
 }
 
+.release-section {
+  background: #0b1111;
+}
+
+.release-section .intro-grid article {
+  background: #111a1b;
+}
+
 .features-section .section-heading h2,
 .download-section h2 {
   color: #ffffff;
@@ -491,6 +499,15 @@ a {
 .download-actions {
   justify-content: flex-start;
   margin-top: 0;
+}
+
+.download-section .channel-links {
+  font-size: 0.95rem;
+}
+
+.channel-links a {
+  color: var(--mint);
+  font-weight: 800;
 }
 
 .site-footer {
