@@ -28,7 +28,7 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-inner">
-          <p class="hero-version">Word Hunter 1.0.6 for desktop and Android</p>
+          <p class="hero-version">Word Hunter 1.0.6 for Windows, Linux, and Android</p>
           <h1 id="hero-title">Read real texts. Turn every unknown word into a review.</h1>
           <p class="hero-copy">
             Word Hunter is a local-first reader, vocabulary trainer, PDF/OCR workspace, and SRS review tool for learners who want to study from real books, articles, subtitles, and scanned documents.
@@ -257,8 +257,8 @@
             <p>Do heavy importing on desktop, then read, zoom, pan, and review on Word Hunter Pocket.</p>
           </article>
           <article>
-            <h3>Windows and Flatpak</h3>
-            <p>Release builds include Windows installers, portable archives, Android APKs, and Linux Flatpak bundles.</p>
+            <h3>Windows, Linux, and Android</h3>
+            <p>Release builds include Windows installers and portable archives, Android APK and AAB packages, and Linux Flatpak, AppImage, and DEB bundles.</p>
           </article>
         </div>
       </section>
@@ -296,8 +296,8 @@
           </article>
           <article>
             <span>Downloads</span>
-            <h3>Five validated release artifacts</h3>
-            <p>Windows setup and portable builds, Android APK and AAB, and the Linux Flatpak were built by GitHub Actions.</p>
+            <h3>Seven validated release artifacts</h3>
+            <p>Windows setup and portable builds, Android APK and AAB, and Linux Flatpak, AppImage, and DEB packages were built and validated by GitHub Actions.</p>
           </article>
         </div>
       </section>
@@ -305,19 +305,29 @@
       <section class="section download-section" id="download" aria-labelledby="download-title">
         <div>
           <h2 id="download-title">Word Hunter 1.0.6 is available now</h2>
-          <p>Choose the Windows installer or portable archive, install Word Hunter Pocket on Android, or download the Linux Flatpak.</p>
+          <p>Choose the Windows installer or portable archive, install Word Hunter Pocket on Android, or download Flatpak, AppImage, or DEB for Linux.</p>
+          <p>The AppImage includes its own Syncthing executable. The DEB uses the distribution-provided <code>syncthing</code> package and leaves <code>/usr/bin/syncthing</code> untouched.</p>
           <p class="channel-links">
             Package-manager status:
+            <a href="https://github.com/Ironship/scoop-wordhunter">Scoop is available</a>,
             <a href="https://github.com/microsoft/winget-pkgs/pull/401481">WinGet 1.0.6 is under review</a>
             and the
             <a href="https://gitlab.com/fdroid/rfp/-/work_items/4109">F-Droid inclusion request is open</a>.
+            The <a href="https://github.com/Ironship/WordHunter/tree/main/packaging/chocolatey">Chocolatey package source</a> is prepared but not yet listed publicly.
           </p>
+          <div class="scoop-install" aria-label="Install Word Hunter with Scoop">
+            <strong>Install with Scoop</strong>
+            <code>scoop bucket add wordhunter https://github.com/Ironship/scoop-wordhunter</code>
+            <code>scoop install wordhunter/wordhunter</code>
+          </div>
         </div>
         <div class="download-actions">
           <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.6/Word.Hunter.Setup.exe">Download Windows setup</a>
           <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.6/Word.Hunter.portable.zip">Download Windows portable</a>
           <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.6/Word.Hunter.Pocket.debug.apk">Download Android APK</a>
           <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.6/WordHunter.flatpak">Download Linux Flatpak</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.6/WordHunter-1.0.6-x86_64.AppImage">Download Linux AppImage</a>
+          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.6/word-hunter_1.0.6_amd64.deb">Download Linux DEB</a>
         </div>
       </section>
     </main>

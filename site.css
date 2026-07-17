@@ -766,6 +766,29 @@ a {
   font-weight: 800;
 }
 
+.scoop-install {
+  display: grid;
+  gap: 7px;
+  margin-top: 18px;
+  border: 1px solid rgba(123, 211, 251, 0.42);
+  border-left: 4px solid var(--accent-light);
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: #eff8fd;
+  background: rgba(8, 25, 35, 0.72);
+  box-shadow: 0 14px 34px rgba(0, 38, 63, 0.24);
+}
+
+.scoop-install strong {
+  color: var(--accent-light);
+}
+
+.scoop-install code {
+  overflow-wrap: anywhere;
+  color: #ffffff;
+  font-size: 0.84rem;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
