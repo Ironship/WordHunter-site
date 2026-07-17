@@ -766,7 +766,7 @@ a {
   font-weight: 800;
 }
 
-.scoop-install {
+.package-install {
   display: grid;
   gap: 7px;
   margin-top: 18px;
@@ -779,11 +779,11 @@ a {
   box-shadow: 0 14px 34px rgba(0, 38, 63, 0.24);
 }
 
-.scoop-install strong {
+.package-install strong {
   color: var(--accent-light);
 }
 
-.scoop-install code {
+.package-install code {
   overflow-wrap: anywhere;
   color: #ffffff;
   font-size: 0.84rem;
