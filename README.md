@@ -10,7 +10,7 @@ available [official Homebrew tap for Linux x86_64](https://github.com/Ironship/h
 pending [WinGet](https://github.com/microsoft/winget-pkgs/pull/401481),
 [AppImageHub](https://github.com/AppImage/appimage.github.io/pull/3794), and
 [F-Droid](https://gitlab.com/fdroid/rfp/-/work_items/4109) submissions, and the
-prepared but unpublished Chocolatey, Snap, and AUR recipes.
+prepared but unpublished Chocolatey, Snap, AUR, and Nixpkgs recipes.
 
 The site is deployed to GitHub Pages from the `main` branch by the `Deploy GitHub Pages` workflow.
 
