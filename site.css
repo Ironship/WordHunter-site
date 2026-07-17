@@ -18,7 +18,7 @@
   --red: #ff8d8d;
   --purple: #cf9cff;
   --shadow: 0 18px 54px rgba(0, 79, 130, 0.22), 0 2px 8px rgba(0, 79, 130, 0.12);
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 * {
@@ -309,11 +309,11 @@ a {
 }
 
 .learning-section {
-  color: var(--ink);
+  color: #eff8fd;
   background:
-    radial-gradient(circle at 8% 5%, rgba(0, 164, 239, 0.18), transparent 30%),
-    radial-gradient(circle at 92% 24%, rgba(0, 103, 168, 0.13), transparent 28%),
-    var(--paper);
+    radial-gradient(circle at 8% 5%, rgba(0, 164, 239, 0.14), transparent 30%),
+    radial-gradient(circle at 92% 24%, rgba(101, 200, 245, 0.09), transparent 28%),
+    var(--night);
 }
 
 .learning-heading,
@@ -338,10 +338,14 @@ a {
   text-transform: uppercase;
 }
 
+.learning-section .section-kicker {
+  color: var(--accent-light);
+}
+
 .learning-heading h2 {
   max-width: 820px;
   margin: 0 auto;
-  color: var(--ink);
+  color: #eff8fd;
   font-size: clamp(2.35rem, 5.5vw, 5.4rem);
   line-height: 0.96;
 }
@@ -349,7 +353,7 @@ a {
 .learning-heading > p:last-child {
   max-width: 820px;
   margin: 24px auto 0;
-  color: var(--muted);
+  color: #a8c6d8;
   font-size: clamp(1.05rem, 1.9vw, 1.3rem);
 }
 
@@ -366,18 +370,18 @@ a {
   position: relative;
   min-height: 290px;
   overflow: hidden;
-  border: 1px solid rgba(0, 79, 130, 0.16);
+  border: 1px solid #28536b;
   border-radius: 12px;
   padding: 26px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 18px 46px rgba(0, 79, 130, 0.09);
+  background: #0d2635;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.22);
 }
 
 .learning-loop li::after {
   position: absolute;
   right: -18px;
   bottom: -58px;
-  color: rgba(0, 103, 168, 0.08);
+  color: rgba(123, 211, 251, 0.08);
   content: attr(data-step);
   font-size: 9rem;
   font-weight: 950;
@@ -399,7 +403,7 @@ a {
 .learning-loop strong {
   display: block;
   margin-top: 22px;
-  color: var(--ink);
+  color: #eff8fd;
   font-size: 1.25rem;
   line-height: 1.15;
 }
@@ -408,7 +412,7 @@ a {
   position: relative;
   z-index: 1;
   margin: 12px 0 0;
-  color: var(--muted);
+  color: #a8c6d8;
 }
 
 .learning-benefits {
@@ -417,18 +421,18 @@ a {
   gap: 1px;
   overflow: hidden;
   margin-top: 18px;
-  border: 1px solid var(--line);
+  border: 1px solid #28536b;
   border-radius: 12px;
-  background: var(--line);
+  background: #28536b;
 }
 
 .learning-benefits article {
   padding: 30px;
-  background: #ffffff;
+  background: #0d2635;
 }
 
 .learning-benefits span {
-  color: var(--accent-ink);
+  color: var(--accent-light);
   font-size: 0.76rem;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -437,14 +441,14 @@ a {
 
 .learning-benefits h3 {
   margin: 10px 0 12px;
-  color: var(--ink);
+  color: #eff8fd;
   font-size: clamp(1.25rem, 2vw, 1.65rem);
   line-height: 1.1;
 }
 
 .learning-benefits p {
   margin: 0;
-  color: var(--muted);
+  color: #a8c6d8;
 }
 
 .research-panel {
