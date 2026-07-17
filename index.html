@@ -15,6 +15,7 @@
         <span>Word Hunter</span>
       </a>
       <nav class="nav-links" aria-label="Page sections">
+        <a href="#learning">How it helps</a>
         <a href="#screenshots">Screenshots</a>
         <a href="#languages">Languages</a>
         <a href="#features">Features</a>
@@ -35,31 +36,121 @@
             <strong>Back up your words before installing 1.0.0.</strong>
             <span>This release changes the storage and sync compatibility baseline. Export a JSON backup and keep a separate copy of your current Word Hunter data folder before upgrading.</span>
           </aside>
-          <div class="hero-actions" aria-label="Download actions">
+          <div class="hero-actions" role="group" aria-label="Primary actions">
             <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.0.6">Download 1.0.6</a>
-            <a class="button secondary-button" href="https://github.com/Ironship/WordHunter">Browse source</a>
+            <a class="button secondary-button" href="#learning">See how it helps you learn</a>
           </div>
         </div>
       </section>
 
-      <section class="section intro-strip" aria-label="Product summary">
-        <div class="intro-grid">
+      <section class="section learning-section" id="learning" aria-labelledby="learning-title">
+        <div class="learning-heading">
+          <p class="section-kicker">A reading-to-memory workflow</p>
+          <h2 id="learning-title">Do not just collect words. Build a path back to them.</h2>
+          <p>
+            A personal word base is useful when it changes what happens after you close a book. Word Hunter keeps each useful word connected to its sentence, then turns it into an active-recall prompt and schedules another encounter instead of letting it disappear into a notebook.
+          </p>
+        </div>
+
+        <ol class="learning-loop" aria-label="Four-step Word Hunter learning loop">
+          <li data-step="01">
+            <span aria-hidden="true">01</span>
+            <div>
+              <strong>Read something you care about</strong>
+              <p>Use a book, article, subtitle file, EPUB, or PDF. Meaningful context gives an unknown word a situation, tone, and reason to remember it.</p>
+            </div>
+          </li>
+          <li data-step="02">
+            <span aria-hidden="true">02</span>
+            <div>
+              <strong>Save the words worth learning</strong>
+              <p>Add a translation, grammatical article, note, image, and the original sentence. Your database becomes a record of your vocabulary, not somebody else's generic list.</p>
+            </div>
+          </li>
+          <li data-step="03">
+            <span aria-hidden="true">03</span>
+            <div>
+              <strong>Try to recall before revealing</strong>
+              <p>Reader prompts and flashcards ask for the meaning first. Reveal the answer, use the context as feedback, and rate how well you remembered.</p>
+            </div>
+          </li>
+          <li data-step="04">
+            <span aria-hidden="true">04</span>
+            <div>
+              <strong>Return when the word is due</strong>
+              <p>The SRS queue spaces later reviews. You spend time on words that need attention while better-remembered words wait longer between reviews.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="learning-benefits">
           <article>
-            <span>Reader</span>
-            <strong>Highlight words in context</strong>
-            <p>Open imported texts, web articles, EPUB files, subtitles, or PDFs with page backgrounds and mark words as known, ignored, learning, or new.</p>
+            <span>Personal word base</span>
+            <h3>Turn reading history into learning material</h3>
+            <p>Search, filter, edit, export, and revisit words from your own texts. The source sentence remains available as a richer cue than a translation alone.</p>
           </article>
           <article>
-            <span>Memory</span>
-            <strong>Review with SRS</strong>
-            <p>Saved words keep translations, examples, source context, pronunciation, and spaced-repetition history.</p>
+            <span>Active recall</span>
+            <h3>Practice producing the answer</h3>
+            <p>Looking at a translation can feel familiar without proving that you can retrieve it. A recall attempt makes the review diagnostic and gives feedback something to correct.</p>
           </article>
           <article>
-            <span>Sync</span>
-            <strong>Desktop and Pocket</strong>
-            <p>Use a folder you choose to move books, vocabulary, settings, progress, and imported reading material between desktop and Android.</p>
+            <span>Spaced repetition</span>
+            <h3>Review less often, but more deliberately</h3>
+            <p>Due dates distribute practice over time. Word Hunter also waits until at least the next day before a newly learned word becomes an in-reader recall prompt.</p>
           </article>
         </div>
+
+        <aside class="research-panel" aria-labelledby="research-title">
+          <div class="research-heading">
+            <p class="section-kicker">What the research says</p>
+            <h3 id="research-title">The features support well-studied learning habits</h3>
+            <p>These papers study learning methods, not Word Hunter itself. They explain why context, retrieval, repeated encounters, and spacing are useful ingredients to combine.</p>
+          </div>
+
+          <div class="research-grid">
+            <figure>
+              <blockquote cite="https://doi.org/10.1111/cogs.13135">
+                <p>“Reading the words in either the retrieval or inference context increased retention.”</p>
+              </blockquote>
+              <figcaption>
+                van den Broek et al., <cite>Cognitive Science</cite> (2022).
+                <a href="https://doi.org/10.1111/cogs.13135">Contextual vocabulary study</a>
+              </figcaption>
+            </figure>
+            <figure>
+              <blockquote cite="https://doi.org/10.1111/j.1467-9280.2006.01693.x">
+                <p>“Taking a memory test not only assesses what one knows, but also enhances later retention.”</p>
+              </blockquote>
+              <figcaption>
+                Roediger and Karpicke, <cite>Psychological Science</cite> (2006).
+                <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">Retrieval-practice study</a>
+              </figcaption>
+            </figure>
+            <figure>
+              <blockquote cite="https://doi.org/10.1111/j.1467-9280.2008.02209.x">
+                <p>“The optimal gap increased as test delay increased.”</p>
+              </blockquote>
+              <figcaption>
+                Cepeda et al., <cite>Psychological Science</cite> (2008).
+                <a href="https://doi.org/10.1111/j.1467-9280.2008.02209.x">Spacing study</a>
+              </figcaption>
+            </figure>
+            <figure>
+              <blockquote cite="https://doi.org/10.1111/lang.12343">
+                <p>“Results showed that there was a medium effect (r = .34) of repetition on incidental vocabulary learning.”</p>
+              </blockquote>
+              <figcaption>
+                Uchihara, Webb, and Yanagisawa, <cite>Language Learning</cite> (2019), a meta-analysis of 26 studies.
+                <a href="https://doi.org/10.1111/lang.12343">Repetition meta-analysis</a>
+              </figcaption>
+            </figure>
+          </div>
+
+          <p class="research-note">
+            <strong>Use the evidence, not the hype.</strong> Saving every unfamiliar word is not automatically effective. Choose comprehensible material, keep the words that matter to you, attempt recall before checking the answer, and treat context as feedback. Results still depend on attention, prior knowledge, text difficulty, review quality, and repeated exposure.
+          </p>
+        </aside>
       </section>
 
       <section class="section screenshot-section" id="screenshots" aria-labelledby="screenshots-title">
@@ -68,7 +159,7 @@
           <p>Move from library to reader, word base, flashcards, progress, and Pocket without leaving your own data behind.</p>
         </div>
 
-        <div class="slideshow" aria-roledescription="carousel" aria-label="Word Hunter screenshots">
+        <div class="slideshow" role="region" aria-roledescription="carousel" aria-label="Word Hunter screenshots">
           <div class="slide-frame">
             <figure class="slide is-active" data-slide="0">
               <img src="docs/screenshots/pc-library.png" alt="Word Hunter desktop library with import panel">
@@ -100,11 +191,11 @@
             </figure>
           </div>
 
-          <div class="slide-controls" aria-label="Screenshot controls">
+          <div class="slide-controls" role="group" aria-label="Screenshot controls">
             <button class="icon-button" type="button" data-slide-prev aria-label="Previous screenshot">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>
             </button>
-            <div class="slide-dots" aria-label="Choose screenshot">
+            <div class="slide-dots" role="group" aria-label="Choose screenshot">
               <button type="button" class="is-active" data-slide-dot="0" aria-label="Show library screenshot"></button>
               <button type="button" data-slide-dot="1" aria-label="Show reader screenshot"></button>
               <button type="button" data-slide-dot="2" aria-label="Show flashcards screenshot"></button>
@@ -122,19 +213,19 @@
           <h2 id="languages-title">Twelve learning profiles</h2>
           <p>Each language has its own library, vocabulary, review queue, and progress.</p>
         </div>
-        <div class="language-grid" aria-label="Supported learning languages">
-          <span><img src="src/web/flags/en.svg" alt=""> English</span>
-          <span><img src="src/web/flags/de.svg" alt=""> German</span>
-          <span><img src="src/web/flags/es.svg" alt=""> Spanish</span>
-          <span><img src="src/web/flags/it.svg" alt=""> Italian</span>
-          <span><img src="src/web/flags/fr.svg" alt=""> French</span>
-          <span><img src="src/web/flags/pl.svg" alt=""> Polish</span>
-          <span><img src="src/web/flags/uk.svg" alt=""> Ukrainian</span>
-          <span><img src="src/web/flags/ru.svg" alt=""> Russian</span>
-          <span><img src="src/web/flags/ja.svg" alt=""> Japanese</span>
-          <span><img src="src/web/flags/zh.svg" alt=""> Chinese</span>
-          <span><img src="src/web/flags/la.svg" alt=""> Latin</span>
-          <span><img src="src/web/flags/grc.svg" alt=""> Ancient Greek</span>
+        <div class="language-grid" role="list" aria-label="Supported learning languages">
+          <span role="listitem"><img src="src/web/flags/en.svg" alt=""> English</span>
+          <span role="listitem"><img src="src/web/flags/de.svg" alt=""> German</span>
+          <span role="listitem"><img src="src/web/flags/es.svg" alt=""> Spanish</span>
+          <span role="listitem"><img src="src/web/flags/it.svg" alt=""> Italian</span>
+          <span role="listitem"><img src="src/web/flags/fr.svg" alt=""> French</span>
+          <span role="listitem"><img src="src/web/flags/pl.svg" alt=""> Polish</span>
+          <span role="listitem"><img src="src/web/flags/uk.svg" alt=""> Ukrainian</span>
+          <span role="listitem"><img src="src/web/flags/ru.svg" alt=""> Russian</span>
+          <span role="listitem"><img src="src/web/flags/ja.svg" alt=""> Japanese</span>
+          <span role="listitem"><img src="src/web/flags/zh.svg" alt=""> Chinese</span>
+          <span role="listitem"><img src="src/web/flags/la.svg" alt=""> Latin</span>
+          <span role="listitem"><img src="src/web/flags/grc.svg" alt=""> Ancient Greek</span>
         </div>
       </section>
 
@@ -179,32 +270,32 @@
         <div class="intro-grid">
           <article>
             <span>Reader focus</span>
-            <strong>Continue from the current selection</strong>
+            <h3>Continue from the current selection</h3>
             <p>Page changes restore keyboard focus, and Play starts from the exact selected word or phrase occurrence.</p>
           </article>
           <article>
             <span>Review timing</span>
-            <strong>Learn today, recall tomorrow</strong>
+            <h3>Learn today, recall tomorrow</h3>
             <p>Words first moved to Learning today no longer appear as in-text review prompts until the following day.</p>
           </article>
           <article>
             <span>Pocket cards</span>
-            <strong>Clean scrolling under a fixed header</strong>
+            <h3>Clean scrolling under a fixed header</h3>
             <p>Word-card buttons and fields remain below the selected-word heading while the card content scrolls.</p>
           </article>
           <article>
             <span>Built-in readers</span>
-            <strong>Correct A1-B2 title headers</strong>
+            <h3>Correct A1-B2 title headers</h3>
             <p>Every bundled reader begins with its catalog title and a consistent Word Hunter Originals attribution.</p>
           </article>
           <article>
             <span>Italian UI</span>
-            <strong>Corrected interface copy</strong>
+            <h3>Corrected interface copy</h3>
             <p>Incorrect and untranslated Italian labels were reviewed and corrected across the interface.</p>
           </article>
           <article>
             <span>Downloads</span>
-            <strong>Five validated release artifacts</strong>
+            <h3>Five validated release artifacts</h3>
             <p>Windows setup and portable builds, Android APK and AAB, and the Linux Flatpak were built by GitHub Actions.</p>
           </article>
         </div>
