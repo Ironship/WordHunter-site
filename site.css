@@ -1,18 +1,23 @@
 :root {
-  --ink: #101515;
-  --muted: #61706d;
-  --paper: #f6f8f6;
+  --ink: #17232d;
+  --muted: #526674;
+  --paper: #f3f8fc;
   --panel: #ffffff;
-  --line: #dce4e0;
-  --deep: #091010;
-  --deep-2: #111a1b;
-  --mint: #54c7a2;
-  --mint-dark: #1f8a70;
-  --mint-ink: #176b58;
-  --sky: #76aee8;
-  --amber: #f2b84c;
-  --coral: #ee6a63;
-  --shadow: 0 24px 70px rgba(7, 18, 17, 0.22);
+  --line: #cbdde9;
+  --night: #081923;
+  --deep: #00395d;
+  --deep-2: #0d2635;
+  --blue: #0067a8;
+  --accent: #00a4ef;
+  --accent-ink: #0067a8;
+  --accent-soft: #d9effb;
+  --accent-light: #7bd3fb;
+  --accent-pale: #d7effc;
+  --amber: #f2be63;
+  --amber-soft: #423217;
+  --red: #ff8d8d;
+  --purple: #cf9cff;
+  --shadow: 0 18px 54px rgba(0, 79, 130, 0.22), 0 2px 8px rgba(0, 79, 130, 0.12);
   color-scheme: light;
 }
 
@@ -30,8 +35,8 @@ html {
 
 body {
   margin: 0;
-  color: #f8fffc;
-  background: #07100f;
+  color: #eff8fd;
+  background: var(--night);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.55;
 }
@@ -45,6 +50,24 @@ a {
   color: inherit;
 }
 
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.site-header :focus-visible,
+.hero :focus-visible,
+.research-panel :focus-visible,
+.screenshot-section :focus-visible,
+.languages-section :focus-visible,
+.features-section :focus-visible,
+.release-section :focus-visible,
+.download-section :focus-visible,
+.site-footer :focus-visible,
+.legal-page :focus-visible {
+  outline-color: var(--accent-light);
+}
+
 .site-header {
   position: fixed;
   top: 0;
@@ -56,8 +79,8 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 16px clamp(18px, 4vw, 56px);
-  color: #f8fffc;
-  background: rgba(8, 13, 13, 0.76);
+  color: #ffffff;
+  background: rgba(0, 57, 93, 0.84);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(16px);
 }
@@ -84,7 +107,7 @@ a {
 }
 
 .nav-links a {
-  color: rgba(248, 255, 252, 0.78);
+  color: rgba(238, 249, 255, 0.82);
   text-decoration: none;
 }
 
@@ -121,7 +144,7 @@ a {
 
 .hero::after {
   z-index: -1;
-  background: rgba(7, 12, 12, 0.72);
+  background: rgba(0, 39, 65, 0.74);
 }
 
 .hero-inner {
@@ -133,7 +156,7 @@ a {
 
 .hero-version {
   margin: 0 0 16px;
-  color: var(--mint);
+  color: var(--accent-light);
   font-size: 0.9rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -149,7 +172,7 @@ a {
 .hero-copy {
   max-width: 680px;
   margin: 24px auto 0;
-  color: rgba(248, 255, 252, 0.82);
+  color: rgba(238, 249, 255, 0.84);
   font-size: clamp(1.05rem, 2vw, 1.35rem);
 }
 
@@ -158,22 +181,22 @@ a {
   gap: 4px;
   max-width: 680px;
   margin: 24px auto 0;
-  border: 1px solid rgba(242, 184, 76, 0.72);
+  border: 1px solid rgba(242, 190, 99, 0.72);
   border-left: 5px solid var(--amber);
   border-radius: 8px;
   padding: 16px 18px;
-  color: #fff8e8;
-  background: rgba(44, 30, 5, 0.82);
+  color: #fff1d2;
+  background: rgba(66, 50, 23, 0.88);
   text-align: left;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
 }
 
 .release-warning strong {
-  color: #ffd889;
+  color: var(--amber);
 }
 
 .release-warning span {
-  color: rgba(255, 248, 232, 0.82);
+  color: rgba(255, 241, 210, 0.86);
 }
 
 .hero-actions,
@@ -204,10 +227,10 @@ a {
 }
 
 .primary-button {
-  color: #07100d;
-  background: var(--mint);
-  border: 1px solid var(--mint);
-  box-shadow: 0 18px 44px rgba(84, 199, 162, 0.26);
+  color: #ffffff;
+  background: var(--blue);
+  border: 1px solid var(--accent-light);
+  box-shadow: 0 18px 44px rgba(0, 103, 168, 0.3);
 }
 
 .secondary-button {
@@ -241,7 +264,7 @@ a {
 }
 
 .intro-grid span {
-  color: var(--amber);
+  color: var(--accent-light);
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -260,7 +283,7 @@ a {
 .intro-grid p,
 .feature-grid p {
   margin: 0;
-  color: rgba(248, 255, 252, 0.68);
+  color: rgba(238, 249, 255, 0.72);
 }
 
 .section-heading {
@@ -281,16 +304,16 @@ a {
 .section-heading p,
 .download-section p {
   margin: 18px auto 0;
-  color: rgba(248, 255, 252, 0.68);
+  color: rgba(238, 249, 255, 0.72);
   font-size: clamp(1rem, 1.8vw, 1.18rem);
 }
 
 .learning-section {
   color: var(--ink);
   background:
-    radial-gradient(circle at 8% 5%, rgba(84, 199, 162, 0.18), transparent 30%),
-    radial-gradient(circle at 92% 24%, rgba(118, 174, 232, 0.16), transparent 28%),
-    #edf3ef;
+    radial-gradient(circle at 8% 5%, rgba(0, 164, 239, 0.18), transparent 30%),
+    radial-gradient(circle at 92% 24%, rgba(0, 103, 168, 0.13), transparent 28%),
+    var(--paper);
 }
 
 .learning-heading,
@@ -308,7 +331,7 @@ a {
 
 .section-kicker {
   margin: 0 0 12px;
-  color: var(--mint-ink);
+  color: var(--accent-ink);
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -326,7 +349,7 @@ a {
 .learning-heading > p:last-child {
   max-width: 820px;
   margin: 24px auto 0;
-  color: #42514e;
+  color: var(--muted);
   font-size: clamp(1.05rem, 1.9vw, 1.3rem);
 }
 
@@ -343,18 +366,18 @@ a {
   position: relative;
   min-height: 290px;
   overflow: hidden;
-  border: 1px solid rgba(16, 21, 21, 0.12);
+  border: 1px solid rgba(0, 79, 130, 0.16);
   border-radius: 12px;
   padding: 26px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 18px 46px rgba(24, 49, 43, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 46px rgba(0, 79, 130, 0.09);
 }
 
 .learning-loop li::after {
   position: absolute;
   right: -18px;
   bottom: -58px;
-  color: rgba(31, 138, 112, 0.08);
+  color: rgba(0, 103, 168, 0.08);
   content: attr(data-step);
   font-size: 9rem;
   font-weight: 950;
@@ -368,7 +391,7 @@ a {
   place-items: center;
   border-radius: 50%;
   color: #ffffff;
-  background: var(--mint-dark);
+  background: var(--blue);
   font-size: 0.78rem;
   font-weight: 900;
 }
@@ -385,7 +408,7 @@ a {
   position: relative;
   z-index: 1;
   margin: 12px 0 0;
-  color: #586662;
+  color: var(--muted);
 }
 
 .learning-benefits {
@@ -394,9 +417,9 @@ a {
   gap: 1px;
   overflow: hidden;
   margin-top: 18px;
-  border: 1px solid rgba(16, 21, 21, 0.13);
+  border: 1px solid var(--line);
   border-radius: 12px;
-  background: rgba(16, 21, 21, 0.13);
+  background: var(--line);
 }
 
 .learning-benefits article {
@@ -405,7 +428,7 @@ a {
 }
 
 .learning-benefits span {
-  color: var(--mint-ink);
+  color: var(--accent-ink);
   font-size: 0.76rem;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -421,15 +444,16 @@ a {
 
 .learning-benefits p {
   margin: 0;
-  color: #586662;
+  color: var(--muted);
 }
 
 .research-panel {
   margin-top: clamp(46px, 7vw, 82px);
   border-radius: 16px;
   padding: clamp(28px, 5vw, 58px);
-  color: #f8fffc;
-  background: #101919;
+  color: #eff8fd;
+  background: #0d2635;
+  border: 1px solid #28536b;
   box-shadow: var(--shadow);
 }
 
@@ -443,7 +467,7 @@ a {
 .research-heading .section-kicker {
   grid-column: 1 / -1;
   margin-bottom: 0;
-  color: var(--mint);
+  color: var(--accent-light);
 }
 
 .research-heading h3 {
@@ -455,7 +479,7 @@ a {
 
 .research-heading > p:last-child {
   margin: 0;
-  color: rgba(248, 255, 252, 0.7);
+  color: rgba(239, 248, 253, 0.72);
   font-size: 1.05rem;
 }
 
@@ -471,10 +495,10 @@ a {
   align-content: space-between;
   min-height: 260px;
   margin: 0;
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  border: 1px solid #28536b;
   border-radius: 10px;
   padding: 28px;
-  background: rgba(255, 255, 255, 0.045);
+  background: #123449;
 }
 
 .research-grid blockquote {
@@ -491,7 +515,7 @@ a {
 
 .research-grid figcaption {
   margin-top: 28px;
-  color: rgba(248, 255, 252, 0.62);
+  color: rgba(239, 248, 253, 0.68);
   font-size: 0.88rem;
 }
 
@@ -499,7 +523,7 @@ a {
   display: block;
   width: fit-content;
   margin-top: 8px;
-  color: var(--mint);
+  color: var(--accent-light);
   font-weight: 850;
 }
 
@@ -507,16 +531,16 @@ a {
   margin: 18px 0 0;
   border-left: 4px solid var(--amber);
   padding: 18px 20px;
-  color: rgba(248, 255, 252, 0.72);
-  background: rgba(242, 184, 76, 0.08);
+  color: rgba(255, 241, 210, 0.86);
+  background: var(--amber-soft);
 }
 
 .research-note strong {
-  color: #ffd889;
+  color: var(--amber);
 }
 
 .screenshot-section {
-  background: #0b1111;
+  background: var(--night);
 }
 
 .slideshow {
@@ -528,9 +552,9 @@ a {
   position: relative;
   min-height: min(65vw, 640px);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid #28536b;
   border-radius: 8px;
-  background: #0f1515;
+  background: #0d2635;
   box-shadow: var(--shadow);
 }
 
@@ -563,8 +587,8 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 20px clamp(18px, 3vw, 34px);
-  color: #f8fffc;
-  background: #101818;
+  color: #eff8fd;
+  background: #0d2635;
 }
 
 .slide figcaption strong {
@@ -574,7 +598,7 @@ a {
 
 .slide figcaption span {
   max-width: 660px;
-  color: rgba(248, 255, 252, 0.72);
+  color: rgba(239, 248, 253, 0.72);
 }
 
 .slide-controls {
@@ -591,9 +615,9 @@ a {
   display: inline-grid;
   place-items: center;
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid #28536b;
   border-radius: 50%;
-  background: #111a1b;
+  background: #123449;
   cursor: pointer;
 }
 
@@ -616,20 +640,20 @@ a {
   width: 11px;
   height: 11px;
   padding: 0;
-  border: 1px solid rgba(248, 255, 252, 0.58);
+  border: 1px solid rgba(239, 248, 253, 0.62);
   border-radius: 50%;
   background: transparent;
   cursor: pointer;
 }
 
 .slide-dots button.is-active {
-  background: var(--mint-dark);
-  border-color: var(--mint-dark);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .languages-section {
   color: #ffffff;
-  background: #0b1111;
+  background: var(--night);
 }
 
 .languages-section .section-heading h2 {
@@ -637,7 +661,7 @@ a {
 }
 
 .languages-section .section-heading p {
-  color: rgba(248, 255, 252, 0.7);
+  color: rgba(239, 248, 253, 0.72);
 }
 
 .language-grid {
@@ -655,9 +679,9 @@ a {
   gap: 12px;
   padding: 12px 14px;
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid #28536b;
   border-radius: 8px;
-  background: #111a1b;
+  background: #0d2635;
   font-weight: 800;
 }
 
@@ -674,11 +698,11 @@ a {
 }
 
 .release-section {
-  background: #0b1111;
+  background: var(--night);
 }
 
 .release-section .intro-grid article {
-  background: #111a1b;
+  background: #123449;
 }
 
 .features-section .section-heading h2,
@@ -688,7 +712,7 @@ a {
 
 .features-section .section-heading p,
 .download-section p {
-  color: rgba(248, 255, 252, 0.72);
+  color: rgba(239, 248, 253, 0.74);
 }
 
 .feature-grid {
@@ -696,15 +720,15 @@ a {
 }
 
 .feature-grid article:nth-child(1) {
-  border-top: 4px solid var(--coral);
+  border-top: 4px solid var(--red);
 }
 
 .feature-grid article:nth-child(2) {
-  border-top: 4px solid var(--mint);
+  border-top: 4px solid var(--accent);
 }
 
 .feature-grid article:nth-child(3) {
-  border-top: 4px solid var(--sky);
+  border-top: 4px solid var(--accent-light);
 }
 
 .feature-grid article:nth-child(4) {
@@ -716,7 +740,7 @@ a {
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.8fr);
   align-items: center;
   gap: clamp(26px, 5vw, 70px);
-  background: #13201f;
+  background: #005a95;
   color: #ffffff;
 }
 
@@ -734,7 +758,7 @@ a {
 }
 
 .channel-links a {
-  color: var(--mint);
+  color: var(--accent-pale);
   font-weight: 800;
 }
 
@@ -743,8 +767,8 @@ a {
   justify-content: space-between;
   gap: 16px;
   padding: 28px clamp(18px, 4vw, 56px);
-  color: rgba(248, 255, 252, 0.74);
-  background: #07100f;
+  color: rgba(239, 248, 253, 0.76);
+  background: var(--night);
 }
 
 .site-footer a {
@@ -762,7 +786,7 @@ a {
 .legal-page {
   min-height: 100svh;
   padding-top: 82px;
-  background: #0b1111;
+  background: var(--night);
 }
 
 .legal-hero,
@@ -785,7 +809,7 @@ a {
 
 .legal-hero p {
   margin: 18px 0 0;
-  color: var(--mint);
+  color: var(--accent-light);
   font-weight: 850;
 }
 
@@ -801,11 +825,11 @@ a {
 
 .legal-content p {
   margin: 0;
-  color: rgba(248, 255, 252, 0.72);
+  color: rgba(239, 248, 253, 0.74);
 }
 
 .legal-content a {
-  color: var(--mint);
+  color: var(--accent-light);
   font-weight: 850;
 }
 
@@ -843,7 +867,7 @@ a {
 
   .slide img {
     object-fit: contain;
-    background: #0f1515;
+    background: #0d2635;
   }
 
   .slide figcaption {
