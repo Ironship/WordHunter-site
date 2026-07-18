@@ -28,7 +28,7 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-inner">
-          <p class="hero-version">Word Hunter 1.0.6 for Windows, Linux, and Android</p>
+          <p class="hero-version">Word Hunter 1.0.6 for Windows, macOS, Linux, and Android</p>
           <h1 id="hero-title">Read real texts. Turn every unknown word into a review.</h1>
           <p class="hero-copy">
             Word Hunter is a local-first reader, vocabulary trainer, PDF/OCR workspace, and SRS review tool for learners who want to study from real books, articles, subtitles, and scanned documents.
@@ -257,8 +257,8 @@
             <p>Do heavy importing on desktop, then read, zoom, pan, and review on Word Hunter Pocket.</p>
           </article>
           <article>
-            <h3>Windows, Linux, and Android</h3>
-            <p>Release builds include Windows installers and portable archives, Android APK and AAB packages, and Linux Flatpak, AppImage, and DEB bundles.</p>
+            <h3>Windows, macOS, Linux, and Android</h3>
+            <p>Release builds include Windows installers and portable archives, an Apple Silicon macOS DMG, Android APK and AAB packages, and Linux Flatpak, AppImage, and DEB bundles.</p>
           </article>
         </div>
       </section>
@@ -296,8 +296,8 @@
           </article>
           <article>
             <span>Downloads</span>
-            <h3>Seven validated release artifacts</h3>
-            <p>Windows setup and portable builds, Android APK and AAB, and Linux Flatpak, AppImage, and DEB packages were built and validated by GitHub Actions.</p>
+            <h3>Eight validated release artifacts</h3>
+            <p>Windows setup and portable builds, an Apple Silicon macOS DMG, Android APK and AAB, and Linux Flatpak, AppImage, and DEB packages were built and validated by GitHub Actions.</p>
           </article>
         </div>
       </section>
@@ -305,7 +305,7 @@
       <section class="section download-section" id="download" aria-labelledby="download-title">
         <div>
           <h2 id="download-title">Word Hunter 1.0.6 is available now</h2>
-          <p>Choose the Windows installer or portable archive, install Word Hunter Pocket on Android, or download Flatpak, AppImage, or DEB for Linux.</p>
+          <p>Choose the Windows installer or portable archive, download the Apple Silicon DMG for macOS, install Word Hunter Pocket on Android, or download Flatpak, AppImage, or DEB for Linux.</p>
           <p>The AppImage includes its own Syncthing executable. The DEB uses the distribution-provided <code>syncthing</code> package and leaves <code>/usr/bin/syncthing</code> untouched.</p>
           <p class="channel-links">
             Package-manager status:
@@ -315,6 +315,7 @@
             <a href="https://github.com/AppImage/appimage.github.io/pull/3794">AppImageHub is under review</a>,
             and the
             <a href="https://gitlab.com/fdroid/rfp/-/work_items/4109">F-Droid inclusion request is open</a>.
+            Word Hunter Pocket is not currently listed on Google Play, and the direct Flatpak is not listed on Flathub.
             The <a href="https://github.com/Ironship/WordHunter/tree/main/packaging/chocolatey">Chocolatey</a>,
             <a href="https://github.com/Ironship/WordHunter/tree/main/packaging/snap">Snap</a>,
             <a href="https://github.com/Ironship/WordHunter/tree/main/packaging/aur">AUR</a>, and
@@ -330,10 +331,19 @@
             <strong>Install with Homebrew on Linux x86_64 (Homebrew 5.1.12+)</strong>
             <code>brew install --cask Ironship/wordhunter/wordhunter</code>
           </div>
+          <div class="package-install" role="group" aria-label="Install Word Hunter on macOS">
+            <strong>Install on macOS (Apple Silicon)</strong>
+            <span>1. Open the DMG and drag Word Hunter to <b>Applications</b>.</span>
+            <span>2. Try to open Word Hunter. Because the app is ad-hoc signed and not notarized, macOS may block the first launch.</span>
+            <span>3. Open <b>System Settings -&gt; Privacy &amp; Security</b>.</span>
+            <span>4. Under <b>Security</b>, click <b>Open Anyway</b>, enter your password, and confirm <b>Open</b>.</span>
+            <span>macOS saves the approval for later launches. See <a href="https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac">Apple's instructions</a>.</span>
+          </div>
         </div>
         <div class="download-actions">
           <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.6/Word.Hunter.Setup.exe">Download Windows setup</a>
           <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.6/Word.Hunter.portable.zip">Download Windows portable</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.6/WordHunter-1.0.6-aarch64.dmg">Download macOS DMG</a>
           <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.6/Word.Hunter.Pocket.debug.apk">Download Android APK</a>
           <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.6/WordHunter.flatpak">Download Linux Flatpak</a>
           <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.6/WordHunter-1.0.6-x86_64.AppImage">Download Linux AppImage</a>
