@@ -3,11 +3,11 @@
 Official website and privacy policy for [Word Hunter](https://github.com/Ironship/WordHunter).
 
 The download page tracks the stable
-[Word Hunter 1.0.8 release](https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.0.8),
+[Word Hunter 1.0.9 release](https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.0.9),
 including direct Windows, macOS, Android, Flatpak, AppImage, and DEB downloads, the
 available [official Scoop bucket](https://github.com/Ironship/scoop-wordhunter),
 available [official Homebrew tap for Linux x86_64](https://github.com/Ironship/homebrew-wordhunter),
-available [WinGet](https://github.com/microsoft/winget-pkgs/pull/410469)
+under-review [WinGet](https://github.com/microsoft/winget-pkgs/pull/410469)
 and [AppImageHub](https://github.com/AppImage/appimage.github.io/pull/3794)
 packages, the pending
 [F-Droid](https://gitlab.com/fdroid/rfp/-/work_items/4109) submission, and the

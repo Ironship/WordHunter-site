@@ -20,7 +20,7 @@
         <a href="#screenshots">Screenshots</a>
         <a href="#languages">Languages</a>
         <a href="#features">Features</a>
-        <a href="#release">1.0.8</a>
+        <a href="#release">1.0.9</a>
         <a href="#download">Download</a>
       </nav>
     </header>
@@ -28,7 +28,7 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-inner">
-          <p class="hero-version">Word Hunter 1.0.8 for Windows, macOS, Linux, and Android</p>
+          <p class="hero-version">Word Hunter 1.0.9 for Windows, macOS, Linux, and Android</p>
           <h1 id="hero-title">Read real texts. Turn every unknown word into a review.</h1>
           <p class="hero-copy">
             Word Hunter is a local-first reader, vocabulary trainer, PDF/OCR workspace, and SRS review tool for learners who want to study from real books, articles, subtitles, and scanned documents.
@@ -38,7 +38,7 @@
             <span>Version 1.0.0 changed the storage and sync compatibility baseline. Export a JSON backup and keep a separate copy of your current Word Hunter data folder before upgrading.</span>
           </aside>
           <div class="hero-actions" role="group" aria-label="Primary actions">
-            <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.0.8">Download 1.0.8</a>
+            <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.0.9">Download 1.0.9</a>
             <a class="button secondary-button" href="#learning">See how it helps you learn</a>
           </div>
         </div>
@@ -265,53 +265,53 @@
 
       <section class="section release-section" id="release" aria-labelledby="release-title">
         <div class="section-heading">
-          <h2 id="release-title">What's new in 1.0.8</h2>
-          <p>Reliable vocabulary synchronization and a faster Android startup.</p>
+          <h2 id="release-title">What's new in 1.0.9</h2>
+          <p>Explicit ZIP transfer packages replace background synchronization, plus reliability, security, and UX fixes.</p>
         </div>
         <div class="intro-grid">
           <article>
-            <span>Sync reliability</span>
-            <h3>Status changes win by timestamp</h3>
-            <p>Each explicit status change carries its own timestamp, so a later decision like moving a word from Learning to Known wins even when another device later synchronizes older status data.</p>
+            <span>Transfers</span>
+            <h3>Explicit ZIP packages, no background sync</h3>
+            <p>Syncthing is gone. Export one ZIP package with books, words, settings, progress, and book images, then import it on another device through a native file picker.</p>
           </article>
           <article>
-            <span>Legacy data</span>
-            <h3>Safe conflict fallback</h3>
-            <p>Older records without a status timestamp use a deterministic fallback that prevents a Known word from unexpectedly returning to Learning or New.</p>
+            <span>Storage</span>
+            <h3>YAML records, timestamped merges</h3>
+            <p>Every word is its own YAML file and every book a book.yaml with an image folder. Records merge by their updatedAt timestamp; legacy JSON migrates automatically.</p>
           </article>
           <article>
-            <span>Android startup</span>
-            <h3>Faster first frame</h3>
-            <p>The startup JavaScript graph is bundled into one request, while library hydration, update checks, and translator checks wait until after the first frame.</p>
+            <span>PC startup</span>
+            <h3>No more silent launch failures</h3>
+            <p>The app falls back to the default data folder when the configured one is missing, and startup errors show a native dialog instead of a crash.</p>
           </article>
           <article>
-            <span>Library loading</span>
-            <h3>Load only what you open</h3>
-            <p>Word Hunter loads the active text when needed instead of eagerly loading every saved book and PDF at startup.</p>
+            <span>Export UX</span>
+            <h3>Progress bar while packaging</h3>
+            <p>Desktop export builds the ZIP in the background and shows a 0–100% stage-based progress bar, and large OCR books transfer correctly.</p>
           </article>
           <article>
-            <span>Android security</span>
-            <h3>Local-only cleartext</h3>
-            <p>Release builds allow cleartext traffic only to the local Word Hunter backend on localhost and 127.0.0.1.</p>
+            <span>Android</span>
+            <h3>TTS, word sheet, and PDF import fixes</h3>
+            <p>Adaptive TTS timeouts, a resizable word sheet with pull gestures, PDF import progress with cancel, faster startup, and landscape layout fixes.</p>
           </article>
           <article>
-            <span>macOS</span>
-            <h3>Apple Silicon DMG</h3>
-            <p>A validated WordHunter-1.0.8-aarch64.dmg adds first-class macOS support alongside Windows, Linux, and Android packages.</p>
+            <span>Languages</span>
+            <h3>Chinese (Simplified) interface</h3>
+            <p>A full Chinese interface joins the nine existing locales, and shutdown no longer stalls on a redundant full save.</p>
           </article>
         </div>
       </section>
 
       <section class="section download-section" id="download" aria-labelledby="download-title">
         <div>
-          <h2 id="download-title">Word Hunter 1.0.8 is available now</h2>
+          <h2 id="download-title">Word Hunter 1.0.9 is available now</h2>
           <p>Choose the Windows installer or portable archive, the macOS Apple Silicon DMG, Word Hunter Pocket on Android, or Flatpak, AppImage, and DEB packages for Linux.</p>
-          <p>The AppImage includes its own Syncthing executable. The DEB uses the distribution-provided <code>syncthing</code> package and leaves <code>/usr/bin/syncthing</code> untouched.</p>
+          <p>Both Linux packages bundle the local OCR runtime and models; no Syncthing or external sync service is included or required.</p>
           <p class="channel-links">
             Package-manager status:
             <a href="https://github.com/Ironship/scoop-wordhunter">Scoop is available</a>,
             the <a href="https://github.com/Ironship/homebrew-wordhunter">official Homebrew tap for Linux x86_64 is available</a>,
-            <a href="https://github.com/microsoft/winget-pkgs/pull/410469">WinGet 1.0.8 is available</a>,
+            <a href="https://github.com/microsoft/winget-pkgs/pull/411263">WinGet 1.0.9 is under review</a>,
             <a href="https://github.com/AppImage/appimage.github.io/pull/3794">Word Hunter is on AppImageHub</a>,
             and the
             <a href="https://gitlab.com/fdroid/rfp/-/work_items/4109">F-Droid inclusion request is open</a>.
@@ -332,14 +332,14 @@
           </div>
         </div>
         <div class="download-actions">
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.8/Word.Hunter.Setup.exe">Download Windows setup</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.8/Word.Hunter.portable.zip">Download Windows portable</a>
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.8/WordHunter-1.0.8-aarch64.dmg">Download macOS DMG</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.8/Word.Hunter.Pocket.debug.apk">Download Android APK</a>
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.8/Word.Hunter.Pocket.release.aab">Download Android AAB</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.8/WordHunter.flatpak">Download Linux Flatpak</a>
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.8/WordHunter-1.0.8-x86_64.AppImage">Download Linux AppImage</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.8/word-hunter_1.0.8_amd64.deb">Download Linux DEB</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.9/Word.Hunter.Setup.exe">Download Windows setup</a>
+          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.9/Word.Hunter.portable.zip">Download Windows portable</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.9/WordHunter-1.0.9-aarch64.dmg">Download macOS DMG</a>
+          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.9/Word.Hunter.Pocket.debug.apk">Download Android APK</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.9/Word.Hunter.Pocket.release.aab">Download Android AAB</a>
+          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.9/WordHunter.flatpak">Download Linux Flatpak</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.9/WordHunter-1.0.9-x86_64.AppImage">Download Linux AppImage</a>
+          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.9/word-hunter_1.0.9_amd64.deb">Download Linux DEB</a>
         </div>
       </section>
     </main>
