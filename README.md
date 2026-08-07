@@ -3,7 +3,7 @@
 Official website and privacy policy for [Word Hunter](https://github.com/Ironship/WordHunter).
 
 The download page tracks the stable
-[Word Hunter 1.0.9 release](https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.0.9),
+[Word Hunter 1.0.10 release](https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.0.10),
 including direct Windows, macOS, Android, Flatpak, AppImage, and DEB downloads, the
 available [official Scoop bucket](https://github.com/Ironship/scoop-wordhunter),
 available [official Homebrew tap for Linux x86_64](https://github.com/Ironship/homebrew-wordhunter),
