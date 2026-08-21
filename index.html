@@ -20,7 +20,7 @@
         <a href="#screenshots">Screenshots</a>
         <a href="#languages">Languages</a>
         <a href="#features">Features</a>
-        <a href="#release">1.0.10</a>
+        <a href="#release">1.0.13</a>
         <a href="#download">Download</a>
       </nav>
     </header>
@@ -28,7 +28,7 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-inner">
-          <p class="hero-version">Word Hunter 1.0.10 for Windows, macOS, Linux, and Android</p>
+          <p class="hero-version">Word Hunter 1.0.13 for Windows, macOS, Linux, and Android</p>
           <h1 id="hero-title">Read real texts. Turn every unknown word into a review.</h1>
           <p class="hero-copy">
             Word Hunter is a local-first reader, vocabulary trainer, PDF/OCR workspace, and SRS review tool for learners who want to study from real books, articles, subtitles, and scanned documents.
@@ -38,7 +38,7 @@
             <span>Version 1.0.0 changed the storage and sync compatibility baseline. Export a JSON backup and keep a separate copy of your current Word Hunter data folder before upgrading.</span>
           </aside>
           <div class="hero-actions" role="group" aria-label="Primary actions">
-            <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.0.10">Download 1.0.10</a>
+            <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.0.13">Download 1.0.13</a>
             <a class="button secondary-button" href="#learning">See how it helps you learn</a>
           </div>
         </div>
@@ -263,54 +263,54 @@
         </div>
       </section>
 
-      <section class="section release-section" <div class="section-heading">
-          <h2 id="release-title">What's new in 1.0.10</h2>
-          <p>Contextual AI explanations with streaming markdown, incremental saves, and a round of UX polish.</p>
+      <section class="section release-section" id="release" aria-labelledby="release-title">
+        <div class="section-heading">
+          <h2 id="release-title">What's new in 1.0.13</h2>
+          <p>Smarter AI model discovery, more reliable flashcard images, and a wave of Android reliability fixes. A 1.1.0 prerelease with reading-comfort features is available for testing.</p>
         </div>
         <div class="intro-grid">
           <article>
-            <span>AI explanations</span>
-            <h3>Contextual explanations, streamed</h3>
-            <p>Explain any word or phrase in context with any OpenAI-compatible endpoint. Answers stream in with live formatting, support reasoning-effort levels, and are cached locally.</p>
+            <span>AI models</span>
+            <h3>Searchable model discovery</h3>
+            <p>The model catalog loads only after an explicit refresh and can be filtered locally by multiple terms, so choosing a model works by touch or keyboard without typing raw ids.</p>
           </article>
           <article>
-            <span>Workflow</span>
-            <h3>Automatic explanations and notes</h3>
-            <p>Optionally explain every new word automatically, choose the effort level per profile, and append explanations to the word note for later review.</p>
+            <span>Flashcards</span>
+            <h3>Persistent images, shuffled queues</h3>
+            <p>Tapping a suggestion refreshes the active card immediately and keeps the image. Daily review queues are shuffled, and AI explanations persist into word notes.</p>
           </article>
           <article>
-            <span>Storage</span>
-            <h3>Incremental saves, not full snapshots</h3>
-            <p>Autosave now sends only the changed records instead of a multi-megabyte snapshot every time, so saving, closing, and large libraries all get faster.</p>
+            <span>Android</span>
+            <h3>Safe startup for large libraries</h3>
+            <p>Durable stores get enough time to load, pending replays wait for the snapshot, and deltas are validated before recovery journals are written.</p>
           </article>
           <article>
-            <span>Reader</span>
-            <h3>Scanned pages and context</h3>
-            <p>Explanations can include the visual context of scanned PDF pages, and the reader panel streams the same live-formatted answers as the translator.</p>
+            <span>Reader comfort</span>
+            <h3>New in 1.1.0 prereleases</h3>
+            <p>Read-aloud narration keeps the highlighted word in view, dyslexia-friendly fonts ship with the app, and deleting books shows clear progress instead of a silent wait.</p>
           </article>
           <article>
-            <span>Editing</span>
-            <h3>No more red squiggles</h3>
-            <p>Spellcheck is disabled in foreign-language fields — translator, notes, book editor, and OCR correction — so German texts are no longer underlined as errors.</p>
+            <span>Flashcard quality</span>
+            <h3>Better reverse cards</h3>
+            <p>German separable verbs such as “rief … an” are masked across the example sentence on reverse cards, and a shuffle button re-orders today’s queue at any time.</p>
           </article>
           <article>
-            <span>Polish</span>
-            <h3>Layout and wording fixes</h3>
-            <p>The AI result no longer touches the panel edge, streaming formatting renders immediately, and shutdown is snappier with the leaner save pipeline.</p>
+            <span>Focused discovery</span>
+            <h3>Gutenberg-first catalog</h3>
+            <p>Book discovery now concentrates on Project Gutenberg long-form texts. Already-imported wiki articles remain fully readable in your library.</p>
           </article>
         </div>
-
-</section>
+      </section>
       <section class="section download-section" id="download" aria-labelledby="download-title">
         <div>
-          <h2 id="download-title">Word Hunter 1.0.10 is available now</h2>
+          <h2 id="download-title">Word Hunter 1.0.13 is available now</h2>
           <p>Choose the Windows installer or portable archive, the macOS Apple Silicon DMG, Word Hunter Pocket on Android, or Flatpak, AppImage, and DEB packages for Linux.</p>
           <p>Both Linux packages bundle the local OCR runtime and models; no Syncthing or external sync service is included or required.</p>
           <p class="channel-links">
             Package-manager status:
             <a href="https://github.com/Ironship/scoop-wordhunter">Scoop is available</a>,
             the <a href="https://github.com/Ironship/homebrew-wordhunter">official Homebrew tap for Linux x86_64 is available</a>,
-            <a href="https://github.com/microsoft/winget-pkgs/pull/413629">WinGet 1.0.10 is under review</a>,
+            <a href="https://github.com/microsoft/winget-pkgs/pull/413629">WinGet is under review</a>,
             <a href="https://github.com/AppImage/appimage.github.io/pull/3794">Word Hunter is on AppImageHub</a>,
             and the
             <a href="https://gitlab.com/fdroid/rfp/-/work_items/4109">F-Droid inclusion request is open</a>.
@@ -331,14 +331,14 @@
           </div>
         </div>
         <div class="download-actions">
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.10/Word.Hunter.Setup.exe">Download Windows setup</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.10/Word.Hunter.portable.zip">Download Windows portable</a>
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.10/WordHunter-1.0.10-aarch64.dmg">Download macOS DMG</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.10/Word.Hunter.Pocket.debug.apk">Download Android APK</a>
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.10/Word.Hunter.Pocket.release.aab">Download Android AAB</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.10/WordHunter.flatpak">Download Linux Flatpak</a>
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.10/WordHunter-1.0.10-x86_64.AppImage">Download Linux AppImage</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.10/word-hunter_1.0.10_amd64.deb">Download Linux DEB</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/Word.Hunter.Setup.exe">Download Windows setup</a>
+          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/Word.Hunter.portable.zip">Download Windows portable</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/WordHunter-1.0.13-aarch64.dmg">Download macOS DMG</a>
+          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/Word.Hunter.Pocket.release.apk">Download Android APK</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/Word.Hunter.Pocket.release.aab">Download Android AAB</a>
+          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/WordHunter.flatpak">Download Linux Flatpak</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/WordHunter-1.0.13-x86_64.AppImage">Download Linux AppImage</a>
+          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/word-hunter_1.0.13_amd64.deb">Download Linux DEB</a>
         </div>
       </section>
     </main>
