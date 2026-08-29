@@ -20,7 +20,7 @@
         <a href="#screenshots">Screenshots</a>
         <a href="#languages">Languages</a>
         <a href="#features">Features</a>
-        <a href="#release">1.0.13</a>
+        <a href="#release">1.1.0</a>
         <a href="#download">Download</a>
       </nav>
     </header>
@@ -28,7 +28,7 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-inner">
-          <p class="hero-version">Word Hunter 1.0.13 for Windows, macOS, Linux, and Android</p>
+          <p class="hero-version">Word Hunter 1.1.0 for Windows, macOS, Linux, and Android</p>
           <h1 id="hero-title">Read real texts. Turn every unknown word into a review.</h1>
           <p class="hero-copy">
             Word Hunter is a local-first reader, vocabulary trainer, PDF/OCR workspace, and SRS review tool for learners who want to study from real books, articles, subtitles, and scanned documents.
@@ -38,7 +38,7 @@
             <span>Version 1.0.0 changed the storage and sync compatibility baseline. Export a JSON backup and keep a separate copy of your current Word Hunter data folder before upgrading.</span>
           </aside>
           <div class="hero-actions" role="group" aria-label="Primary actions">
-            <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.0.13">Download 1.0.13</a>
+            <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.1.0">Download 1.1.0</a>
             <a class="button secondary-button" href="#learning">See how it helps you learn</a>
           </div>
         </div>
@@ -265,28 +265,28 @@
 
       <section class="section release-section" id="release" aria-labelledby="release-title">
         <div class="section-heading">
-          <h2 id="release-title">What's new in 1.0.13</h2>
-          <p>Smarter AI model discovery, more reliable flashcard images, and a wave of Android reliability fixes. A 1.1.0 prerelease with reading-comfort features is available for testing.</p>
+          <h2 id="release-title">What's new in 1.1.0</h2>
+          <p>Vocabulary imported straight from World of Warcraft quests, editable saved words, a reading-comfort pass, and a much quicker start for large libraries.</p>
         </div>
         <div class="intro-grid">
           <article>
-            <span>AI models</span>
-            <h3>Searchable model discovery</h3>
-            <p>The model catalog loads only after an explicit refresh and can be filtered locally by multiple terms, so choosing a model works by touch or keyboard without typing raw ids.</p>
+            <span>World of Warcraft</span>
+            <h3>Import quest vocabulary</h3>
+            <p>Read the SavedVariables file written by the WordHunterWoW addon. Words arrive with their status, your meaning, your note, and the quest sentence they came from.</p>
           </article>
           <article>
-            <span>Flashcards</span>
-            <h3>Persistent images, shuffled queues</h3>
-            <p>Tapping a suggestion refreshes the active card immediately and keeps the image. Daily review queues are shuffled, and AI explanations persist into word notes.</p>
+            <span>Vocabulary</span>
+            <h3>Edit the word itself</h3>
+            <p>Correct a headword without losing its learning progress, note, or examples. Imported words also track how many different quests they appeared in, and when.</p>
           </article>
           <article>
-            <span>Android</span>
-            <h3>Safe startup for large libraries</h3>
-            <p>Durable stores get enough time to load, pending replays wait for the snapshot, and deltas are validated before recovery journals are written.</p>
+            <span>Speed</span>
+            <h3>A quicker start on big libraries</h3>
+            <p>Stored records used to be read and parsed several times per action. On a library of about a thousand records, starting the app roughly halved and saving a book edit did too.</p>
           </article>
           <article>
             <span>Reader comfort</span>
-            <h3>New in 1.1.0 prereleases</h3>
+            <h3>Read-aloud that keeps up</h3>
             <p>Read-aloud narration keeps the highlighted word in view, dyslexia-friendly fonts ship with the app, and deleting books shows clear progress instead of a silent wait.</p>
           </article>
           <article>
@@ -297,21 +297,21 @@
           <article>
             <span>Focused discovery</span>
             <h3>Gutenberg-first catalog</h3>
-            <p>Book discovery now concentrates on Project Gutenberg long-form texts. Already-imported wiki articles remain fully readable in your library.</p>
+            <p>Discovery covers Project Gutenberg, Wikipedia, and Wikinews. Only Wikisource was dropped, and anything already imported from it stays readable in your library.</p>
           </article>
         </div>
       </section>
       <section class="section download-section" id="download" aria-labelledby="download-title">
         <div>
-          <h2 id="download-title">Word Hunter 1.0.13 is available now</h2>
+          <h2 id="download-title">Word Hunter 1.1.0 is available now</h2>
           <p>Choose the Windows installer or portable archive, the macOS Apple Silicon DMG, Word Hunter Pocket on Android, or Flatpak, AppImage, and DEB packages for Linux.</p>
           <p>Both Linux packages bundle the local OCR runtime and models; no Syncthing or external sync service is included or required.</p>
           <p class="channel-links">
             Package-manager status:
             <a href="https://github.com/Ironship/scoop-wordhunter">Scoop is available</a>,
             the <a href="https://github.com/Ironship/homebrew-wordhunter">official Homebrew tap for Linux x86_64 is available</a>,
-            <a href="https://github.com/microsoft/winget-pkgs/pull/413629">WinGet is under review</a>,
-            <a href="https://github.com/AppImage/appimage.github.io/pull/3794">Word Hunter is on AppImageHub</a>,
+            <a href="https://github.com/microsoft/winget-pkgs/tree/master/manifests/i/Ironship/WordHunter">WinGet is available</a>,
+            an <a href="https://github.com/AppImage/appimage.github.io/pull/3794">AppImageHub entry is merged but not yet listed in their catalog</a>,
             and the
             <a href="https://gitlab.com/fdroid/rfp/-/work_items/4109">F-Droid inclusion request is open</a>.
             The <a href="https://github.com/Ironship/WordHunter/tree/main/packaging/chocolatey">Chocolatey</a>,
@@ -331,14 +331,14 @@
           </div>
         </div>
         <div class="download-actions">
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/Word.Hunter.Setup.exe">Download Windows setup</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/Word.Hunter.portable.zip">Download Windows portable</a>
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/WordHunter-1.0.13-aarch64.dmg">Download macOS DMG</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/Word.Hunter.Pocket.release.apk">Download Android APK</a>
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/Word.Hunter.Pocket.release.aab">Download Android AAB</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/WordHunter.flatpak">Download Linux Flatpak</a>
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/WordHunter-1.0.13-x86_64.AppImage">Download Linux AppImage</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.0.13/word-hunter_1.0.13_amd64.deb">Download Linux DEB</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/Word.Hunter.Setup.exe">Download Windows setup</a>
+          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/Word.Hunter.portable.zip">Download Windows portable</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/WordHunter-1.1.0-aarch64.dmg">Download macOS DMG</a>
+          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/Word.Hunter.Pocket.release.apk">Download Android APK</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/Word.Hunter.Pocket.release.aab">Download Android AAB</a>
+          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/WordHunter.flatpak">Download Linux Flatpak</a>
+          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/WordHunter-1.1.0-x86_64.AppImage">Download Linux AppImage</a>
+          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/word-hunter_1.1.0_amd64.deb">Download Linux DEB</a>
         </div>
       </section>
     </main>
