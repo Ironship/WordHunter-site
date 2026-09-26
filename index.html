@@ -3,354 +3,503 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0067a8">
-    <title>Word Hunter - read real texts, build real vocabulary</title>
-    <meta name="description" content="Word Hunter is a local-first reader, vocabulary trainer, OCR workspace, and spaced-repetition app for desktop and Android.">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#f6f9fc" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#081520" media="(prefers-color-scheme: dark)">
+    <title>Word Hunter – learn languages by reading what you love</title>
+    <meta name="description" content="Word Hunter is a free, local-first reader and vocabulary trainer for Windows, macOS, Linux and Android. Read real texts, save words with their sentence and review them with spaced repetition.">
+    <link rel="canonical" href="https://ironship.github.io/WordHunter-site/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Word Hunter">
+    <meta property="og:title" content="Word Hunter – learn languages by reading what you love">
+    <meta property="og:description" content="A free, local-first reader and vocabulary trainer. Read real texts, save words with context, review them with spaced repetition.">
+    <meta property="og:url" content="https://ironship.github.io/WordHunter-site/">
+    <meta property="og:image" content="https://ironship.github.io/WordHunter-site/docs/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="src/web/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="site.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Word Hunter",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Windows, macOS, Linux, Android",
+        "description": "A local-first reader and vocabulary trainer: read real texts, save words with context and review them with spaced repetition.",
+        "url": "https://ironship.github.io/WordHunter-site/",
+        "downloadUrl": "https://github.com/Ironship/WordHunter/releases/latest",
+        "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    </script>
   </head>
   <body>
-    <header class="site-header" aria-label="Primary">
-      <a class="brand" href="#top" aria-label="Word Hunter home">
-        <img src="src/web/favicon.svg" alt="">
-        <span>Word Hunter</span>
-      </a>
-      <nav class="nav-links" aria-label="Page sections">
-        <a href="#learning">How it helps</a>
-        <a href="#screenshots">Screenshots</a>
-        <a href="#languages">Languages</a>
-        <a href="#features">Features</a>
-        <a href="#release">1.1.0</a>
-        <a href="#download">Download</a>
-      </nav>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Word Hunter home">
+          <img src="src/web/favicon.svg" alt="" width="32" height="32">
+          <span>Word Hunter</span>
+        </a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+          <a href="#features">Features</a>
+          <a href="#tour">Tour</a>
+          <a href="#languages">Languages</a>
+          <a href="#whats-new">What’s new</a>
+          <a href="#faq">FAQ</a>
+          <a class="nav-github" href="https://github.com/Ironship/WordHunter">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3"/></svg>
+            GitHub
+          </a>
+          <a class="button button-small" href="#download">Download</a>
+        </nav>
+      </div>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-inner">
-          <p class="hero-version">Word Hunter 1.1.0 for Windows, macOS, Linux, and Android</p>
-          <h1 id="hero-title">Read real texts. Turn every unknown word into a review.</h1>
-          <p class="hero-copy">
-            Word Hunter is a local-first reader, vocabulary trainer, PDF/OCR workspace, and SRS review tool for learners who want to study from real books, articles, subtitles, and scanned documents.
-          </p>
-          <aside class="release-warning" aria-label="Important upgrade warning">
-            <strong>Back up your words before upgrading from older versions.</strong>
-            <span>Version 1.0.0 changed the storage and sync compatibility baseline. Export a JSON backup and keep a separate copy of your current Word Hunter data folder before upgrading.</span>
-          </aside>
-          <div class="hero-actions" role="group" aria-label="Primary actions">
-            <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.1.0">Download 1.1.0</a>
-            <a class="button secondary-button" href="#learning">See how it helps you learn</a>
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <a class="release-badge" href="https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.1.1" data-release-link>
+              <span class="release-badge-tag">New</span>
+              <span>Version <span data-version>1.1.1</span> is out</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+            </a>
+            <h1 id="hero-title">Learn languages by reading what you <span class="mark">love</span>.</h1>
+            <p class="lead">
+              Word Hunter is a free reader and vocabulary trainer. Open a book, an article or subtitles, click the words you don’t know, and it keeps each one with its sentence – then brings it back for review right before you would forget it.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary button-large" href="#download" data-os-download>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+                <span data-os-label>Download free</span>
+              </a>
+              <a class="button button-ghost button-large" href="#tour">Take the tour</a>
+            </div>
+            <p class="hero-meta" data-os-note>Windows · macOS · Linux · Android — no account, no ads, open source.</p>
+          </div>
+
+          <div class="hero-media" aria-hidden="true">
+            <div class="device-window">
+              <div class="window-bar"><span></span><span></span><span></span></div>
+              <img src="docs/screenshots/pc-reader.webp" alt="" width="1440" height="900" fetchpriority="high">
+            </div>
+            <div class="device-phone">
+              <img src="docs/screenshots/pocket-flashcards.webp" alt="" width="412" height="892">
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <ul class="facts">
+            <li><strong>12</strong><span>learning languages, plus your own</span></li>
+            <li><strong>4</strong><span>platforms: Windows, macOS, Linux, Android</span></li>
+            <li><strong>0</strong><span>accounts, ads or trackers</span></li>
+            <li><strong>100%</strong><span>free and open source</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="how" aria-labelledby="how-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">How it works</p>
+            <h2 id="how-title">From the page to long-term memory</h2>
+            <p>Collecting words is easy. Word Hunter builds the way back to them, so the words you meet while reading become words you actually know.</p>
+          </header>
+          <ol class="steps">
+            <li>
+              <span class="step-number" aria-hidden="true">1</span>
+              <h3>Read something you enjoy</h3>
+              <p>A novel, a news article, an EPUB, a scanned PDF, film subtitles or a free public-domain classic. Every word is marked as new, learning or known.</p>
+            </li>
+            <li>
+              <span class="step-number" aria-hidden="true">2</span>
+              <h3>Click the words that matter</h3>
+              <p>Save a translation, article, note or picture. The sentence you found it in is kept with it, so every word comes with its own context.</p>
+            </li>
+            <li>
+              <span class="step-number" aria-hidden="true">3</span>
+              <h3>Recall before you reveal</h3>
+              <p>Flashcards and in-text prompts ask for the meaning first. You check yourself against the original sentence and rate how well you knew it.</p>
+            </li>
+            <li>
+              <span class="step-number" aria-hidden="true">4</span>
+              <h3>Come back at the right time</h3>
+              <p>Spaced repetition (FSRS or SM-2) schedules each word. Hard words return soon, familiar ones wait longer – no wasted reviews.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="features" aria-labelledby="features-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Features</p>
+            <h2 id="features-title">Everything a reading learner needs, in one app</h2>
+            <p>No subscription and no cloud lock-in. Your books and words live on your device.</p>
+          </header>
+          <div class="feature-grid">
+            <article class="feature">
+              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 5.5C4.5 4.2 8.5 4 12 6c3.5-2 7.5-1.8 10-.5V19c-2.5-1.3-6.5-1.5-10 .5-3.5-2-7.5-1.8-10-.5z"/><path d="M12 6v13.5"/></svg></span>
+              <h3>A reader that knows your words</h3>
+              <p>Every word is colour-coded by how well you know it. Click one to translate it, hear it, look it up in a dictionary or save it – without losing your place.</p>
+            </article>
+            <article class="feature">
+              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span>
+              <h3>Import almost anything</h3>
+              <p>Paste text or open EPUB, PDF, TXT and Markdown files, SRT, VTT and ASS subtitles, web articles and YouTube captions. Browse Project Gutenberg, Wikipedia and Wikinews in the app.</p>
+            </article>
+            <article class="feature">
+              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2"/><path d="M8 9h8M8 12h8M8 15h5"/></svg></span>
+              <h3>Scanned PDFs with local OCR</h3>
+              <p>Desktop packages bundle the OCR engine and models. Read the original page with selectable words laid over it, or switch to a clean text view. Nothing is uploaded.</p>
+            </article>
+            <article class="feature">
+              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="14" rx="2"/><path d="M7 3h11a3 3 0 0 1 3 3v11"/></svg></span>
+              <h3>Flashcards with spaced repetition</h3>
+              <p>Review due words with FSRS or SM-2, keyboard shortcuts, pronunciation, reverse cards and shuffling. On reverse cards the answer is masked inside the example sentence.</p>
+            </article>
+            <article class="feature">
+              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h10M4 12h16M4 18h10"/><circle cx="18" cy="6" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
+              <h3>Your personal word base</h3>
+              <p>Search, filter, edit and clean up every saved word with its status, translation, examples and source. Export to Anki, or back everything up in one ZIP file.</p>
+            </article>
+            <article class="feature">
+              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+              <h3>Progress you can see</h3>
+              <p>A review heatmap, a 30-day due forecast and vocabulary growth mapped to CEFR levels show how far you’ve come and what’s coming up.</p>
+            </article>
+            <article class="feature">
+              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>
+              <h3>Word Hunter Pocket for Android</h3>
+              <p>Import on your computer, then read and review on the go. A transfer package carries books, page images, words, settings and progress between devices.</p>
+            </article>
+            <article class="feature">
+              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg></span>
+              <h3>Comfortable reading</h3>
+              <p>Light and dark themes, adjustable fonts and sizes, the dyslexia-friendly Atkinson Hyperlegible and OpenDyslexic fonts, and read-aloud that keeps the spoken word in view.</p>
+            </article>
+            <article class="feature">
+              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></span>
+              <h3>Optional AI explanations</h3>
+              <p>Ask a local model (llama.cpp, LM Studio, Ollama) or any OpenAI-compatible service you choose to explain a word in its sentence. Off until you turn it on.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section learning-section" id="learning" aria-labelledby="learning-title">
-        <div class="learning-heading">
-          <p class="section-kicker">A reading-to-memory workflow</p>
-          <h2 id="learning-title">Do not just collect words. Build a path back to them.</h2>
-          <p>
-            A personal word base is useful when it changes what happens after you close a book. Word Hunter keeps each useful word connected to its sentence, then turns it into an active-recall prompt and schedules another encounter instead of letting it disappear into a notebook.
-          </p>
-        </div>
+      <section class="section" id="tour" aria-labelledby="tour-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Tour</p>
+            <h2 id="tour-title">See it in action</h2>
+            <p>The same library, words and progress on your computer and in Word Hunter Pocket.</p>
+          </header>
 
-        <ol class="learning-loop" aria-label="Four-step Word Hunter learning loop">
-          <li data-step="01">
-            <span aria-hidden="true">01</span>
-            <div>
-              <strong>Read something you care about</strong>
-              <p>Use a book, article, subtitle file, EPUB, or PDF. Meaningful context gives an unknown word a situation, tone, and reason to remember it.</p>
+          <div class="tour" data-tour>
+            <div class="tour-tabs" role="tablist" aria-label="App views" hidden>
+              <button type="button" role="tab" id="tab-reader" aria-controls="view-reader" aria-selected="true">Reader</button>
+              <button type="button" role="tab" id="tab-library" aria-controls="view-library" aria-selected="false" tabindex="-1">Library</button>
+              <button type="button" role="tab" id="tab-flashcards" aria-controls="view-flashcards" aria-selected="false" tabindex="-1">Flashcards</button>
+              <button type="button" role="tab" id="tab-words" aria-controls="view-words" aria-selected="false" tabindex="-1">Word base</button>
+              <button type="button" role="tab" id="tab-progress" aria-controls="view-progress" aria-selected="false" tabindex="-1">Progress</button>
             </div>
-          </li>
-          <li data-step="02">
-            <span aria-hidden="true">02</span>
-            <div>
-              <strong>Save the words worth learning</strong>
-              <p>Add a translation, grammatical article, note, image, and the original sentence. Your database becomes a record of your vocabulary, not somebody else's generic list.</p>
-            </div>
-          </li>
-          <li data-step="03">
-            <span aria-hidden="true">03</span>
-            <div>
-              <strong>Try to recall before revealing</strong>
-              <p>Reader prompts and flashcards ask for the meaning first. Reveal the answer, use the context as feedback, and rate how well you remembered.</p>
-            </div>
-          </li>
-          <li data-step="04">
-            <span aria-hidden="true">04</span>
-            <div>
-              <strong>Return when the word is due</strong>
-              <p>The SRS queue spaces later reviews. You spend time on words that need attention while better-remembered words wait longer between reviews.</p>
-            </div>
-          </li>
-        </ol>
 
-        <div class="learning-benefits">
-          <article>
-            <span>Personal word base</span>
-            <h3>Turn reading history into learning material</h3>
-            <p>Search, filter, edit, export, and revisit words from your own texts. The source sentence remains available as a richer cue than a translation alone.</p>
-          </article>
-          <article>
-            <span>Active recall</span>
-            <h3>Practice producing the answer</h3>
-            <p>Looking at a translation can feel familiar without proving that you can retrieve it. A recall attempt makes the review diagnostic and gives feedback something to correct.</p>
-          </article>
-          <article>
-            <span>Spaced repetition</span>
-            <h3>Review less often, but more deliberately</h3>
-            <p>Due dates distribute practice over time. Word Hunter also waits until at least the next day before a newly learned word becomes an in-reader recall prompt.</p>
-          </article>
-        </div>
+            <div class="tour-panel" role="tabpanel" id="view-reader" aria-labelledby="tab-reader">
+              <div class="tour-caption">
+                <h3>Reader and word panel</h3>
+                <p>Underlines show what’s new, what you’re learning and what you already know. Click a word to see its translation, your note and the sentences you saved it from.</p>
+              </div>
+              <div class="tour-media">
+                <div class="device-window"><div class="window-bar"><span></span><span></span><span></span></div><img src="docs/screenshots/pc-reader.webp" alt="Desktop reader with coloured word underlines and the word panel for the German word Zimmer" width="1440" height="900" loading="lazy"></div>
+                <div class="device-phone"><img src="docs/screenshots/pocket-reader.webp" alt="Word Hunter Pocket reader on a phone" width="412" height="892" loading="lazy"></div>
+              </div>
+            </div>
 
-        <aside class="research-panel" aria-labelledby="research-title">
-          <div class="research-heading">
-            <p class="section-kicker">What the research says</p>
-            <h3 id="research-title">The features support well-studied learning habits</h3>
-            <p>These papers study learning methods, not Word Hunter itself. They explain why context, retrieval, repeated encounters, and spacing are useful ingredients to combine.</p>
+            <div class="tour-panel" role="tabpanel" id="view-library" aria-labelledby="tab-library">
+              <div class="tour-caption">
+                <h3>Library and import</h3>
+                <p>Your books, articles, subtitles and scanned PDFs in one place, each with its own progress. Built-in stories and A1–B2 course books get you started in every language.</p>
+              </div>
+              <div class="tour-media">
+                <div class="device-window"><div class="window-bar"><span></span><span></span><span></span></div><img src="docs/screenshots/pc-library.webp" alt="Desktop library with book cards, reading progress and the import panel" width="1440" height="900" loading="lazy"></div>
+                <div class="device-phone"><img src="docs/screenshots/pocket-library.webp" alt="Word Hunter Pocket library on a phone" width="412" height="892" loading="lazy"></div>
+              </div>
+            </div>
+
+            <div class="tour-panel" role="tabpanel" id="view-flashcards" aria-labelledby="tab-flashcards">
+              <div class="tour-caption">
+                <h3>Flashcards</h3>
+                <p>Review what’s due with the original sentence as a hint. Reveal, rate and move on – with the keyboard on desktop or a tap on your phone.</p>
+              </div>
+              <div class="tour-media">
+                <div class="device-window"><div class="window-bar"><span></span><span></span><span></span></div><img src="docs/screenshots/pc-flashcards.webp" alt="Desktop flashcard review showing a German word with its example sentence" width="1440" height="900" loading="lazy"></div>
+                <div class="device-phone"><img src="docs/screenshots/pocket-flashcards.webp" alt="Word Hunter Pocket flashcard review on a phone" width="412" height="892" loading="lazy"></div>
+              </div>
+            </div>
+
+            <div class="tour-panel" role="tabpanel" id="view-words" aria-labelledby="tab-words">
+              <div class="tour-caption">
+                <h3>Word base</h3>
+                <p>Every word you save, with its status, translation and example. Filter by book or status, fix a typo without losing progress, and export whenever you like.</p>
+              </div>
+              <div class="tour-media tour-media-wide">
+                <div class="device-window"><div class="window-bar"><span></span><span></span><span></span></div><img src="docs/screenshots/pc-word-base.webp" alt="Vocabulary list with German words, their status, translation and example sentence" width="1440" height="900" loading="lazy"></div>
+              </div>
+            </div>
+
+            <div class="tour-panel" role="tabpanel" id="view-progress" aria-labelledby="tab-progress">
+              <div class="tour-caption">
+                <h3>Progress</h3>
+                <p>See your review activity, what’s due over the next 30 days and how your vocabulary grows towards the next CEFR level.</p>
+              </div>
+              <div class="tour-media">
+                <div class="device-window"><div class="window-bar"><span></span><span></span><span></span></div><img src="docs/screenshots/pc-graphs.webp" alt="Desktop progress charts with a review heatmap and vocabulary growth by CEFR level" width="1440" height="900" loading="lazy"></div>
+                <div class="device-phone"><img src="docs/screenshots/pocket-graphs.webp" alt="Word Hunter Pocket progress charts on a phone" width="412" height="892" loading="lazy"></div>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
+      <section class="section section-alt" id="science" aria-labelledby="science-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Why it works</p>
+            <h2 id="science-title">Built on well-studied learning habits</h2>
+            <p>These studies look at learning methods, not at Word Hunter itself. They show why context, recall, repetition and spacing are worth combining.</p>
+          </header>
           <div class="research-grid">
-            <figure>
-              <blockquote cite="https://doi.org/10.1111/cogs.13135">
-                <p>“Reading the words in either the retrieval or inference context increased retention.”</p>
-              </blockquote>
-              <figcaption>
-                van den Broek et al., <cite>Cognitive Science</cite> (2022).
-                <a href="https://doi.org/10.1111/cogs.13135">Contextual vocabulary study</a>
-              </figcaption>
+            <figure class="quote">
+              <span class="quote-topic">Context</span>
+              <blockquote cite="https://doi.org/10.1111/cogs.13135"><p>“Reading the words in either the retrieval or inference context increased retention.”</p></blockquote>
+              <figcaption>van den Broek et al., <cite>Cognitive Science</cite>, 2022 · <a href="https://doi.org/10.1111/cogs.13135">Study</a></figcaption>
             </figure>
-            <figure>
-              <blockquote cite="https://doi.org/10.1111/j.1467-9280.2006.01693.x">
-                <p>“Taking a memory test not only assesses what one knows, but also enhances later retention.”</p>
-              </blockquote>
-              <figcaption>
-                Roediger and Karpicke, <cite>Psychological Science</cite> (2006).
-                <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">Retrieval-practice study</a>
-              </figcaption>
+            <figure class="quote">
+              <span class="quote-topic">Active recall</span>
+              <blockquote cite="https://doi.org/10.1111/j.1467-9280.2006.01693.x"><p>“Taking a memory test not only assesses what one knows, but also enhances later retention.”</p></blockquote>
+              <figcaption>Roediger &amp; Karpicke, <cite>Psychological Science</cite>, 2006 · <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">Study</a></figcaption>
             </figure>
-            <figure>
-              <blockquote cite="https://doi.org/10.1111/j.1467-9280.2008.02209.x">
-                <p>“The optimal gap increased as test delay increased.”</p>
-              </blockquote>
-              <figcaption>
-                Cepeda et al., <cite>Psychological Science</cite> (2008).
-                <a href="https://doi.org/10.1111/j.1467-9280.2008.02209.x">Spacing study</a>
-              </figcaption>
+            <figure class="quote">
+              <span class="quote-topic">Spacing</span>
+              <blockquote cite="https://doi.org/10.1111/j.1467-9280.2008.02209.x"><p>“The optimal gap increased as test delay increased.”</p></blockquote>
+              <figcaption>Cepeda et al., <cite>Psychological Science</cite>, 2008 · <a href="https://doi.org/10.1111/j.1467-9280.2008.02209.x">Study</a></figcaption>
             </figure>
-            <figure>
-              <blockquote cite="https://doi.org/10.1111/lang.12343">
-                <p>“Results showed that there was a medium effect (r = .34) of repetition on incidental vocabulary learning.”</p>
-              </blockquote>
-              <figcaption>
-                Uchihara, Webb, and Yanagisawa, <cite>Language Learning</cite> (2019), a meta-analysis of 26 studies.
-                <a href="https://doi.org/10.1111/lang.12343">Repetition meta-analysis</a>
-              </figcaption>
+            <figure class="quote">
+              <span class="quote-topic">Repetition</span>
+              <blockquote cite="https://doi.org/10.1111/lang.12343"><p>“Results showed that there was a medium effect (r = .34) of repetition on incidental vocabulary learning.”</p></blockquote>
+              <figcaption>Uchihara, Webb &amp; Yanagisawa, <cite>Language Learning</cite>, 2019, a meta-analysis of 26 studies · <a href="https://doi.org/10.1111/lang.12343">Study</a></figcaption>
             </figure>
           </div>
+          <p class="research-note">No method works on autopilot: pick texts you can mostly understand, save the words that matter to you, and try to recall before you check.</p>
+        </div>
+      </section>
 
-          <p class="research-note">
-            <strong>Use the evidence, not the hype.</strong> Saving every unfamiliar word is not automatically effective. Choose comprehensible material, keep the words that matter to you, attempt recall before checking the answer, and treat context as feedback. Results still depend on attention, prior knowledge, text difficulty, review quality, and repeated exposure.
+      <section class="section" id="languages" aria-labelledby="languages-title">
+        <div class="container languages-grid">
+          <header class="section-head section-head-left">
+            <p class="eyebrow">Languages</p>
+            <h2 id="languages-title">Twelve languages, and room for yours</h2>
+            <p>Each language gets its own library, word base, review queue and progress, with original stories and A1–B2 course books built in. The <em>Other</em> profile works with any language you set up.</p>
+            <p class="small muted">The app itself is available in English, German, Spanish, French, Italian, Polish, Ukrainian, Russian, Japanese and Chinese.</p>
+          </header>
+          <ul class="language-list">
+            <li><img src="src/web/flags/en.svg" alt="" width="28" height="20"> English</li>
+            <li><img src="src/web/flags/de.svg" alt="" width="28" height="20"> German</li>
+            <li><img src="src/web/flags/es.svg" alt="" width="28" height="20"> Spanish</li>
+            <li><img src="src/web/flags/fr.svg" alt="" width="28" height="20"> French</li>
+            <li><img src="src/web/flags/it.svg" alt="" width="28" height="20"> Italian</li>
+            <li><img src="src/web/flags/pl.svg" alt="" width="28" height="20"> Polish</li>
+            <li><img src="src/web/flags/uk.svg" alt="" width="28" height="20"> Ukrainian</li>
+            <li><img src="src/web/flags/ru.svg" alt="" width="28" height="20"> Russian</li>
+            <li><img src="src/web/flags/ja.svg" alt="" width="28" height="20"> Japanese</li>
+            <li><img src="src/web/flags/zh.svg" alt="" width="28" height="20"> Chinese</li>
+            <li><img src="src/web/flags/la.svg" alt="" width="28" height="20"> Latin</li>
+            <li><img src="src/web/flags/grc.svg" alt="" width="28" height="20"> Ancient Greek</li>
+            <li class="language-other"><img src="src/web/flags/other.svg" alt="" width="28" height="20"> Other – any language</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="whats-new" aria-labelledby="whats-new-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">What’s new</p>
+            <h2 id="whats-new-title">Recent releases</h2>
+          </header>
+          <div class="releases">
+            <article class="release-card">
+              <header>
+                <h3>Word Hunter 1.1.1</h3>
+                <p class="release-meta"><time datetime="2026-09-25">25 September 2026</time> · Update</p>
+              </header>
+              <ul>
+                <li><strong>Opens with your own languages and books.</strong> After 1.1.0 the desktop app could briefly start as English and German with an empty library. It now opens straight into your saved languages, theme and library.</li>
+                <li><strong>Flashcards keep their secrets.</strong> The Upcoming reviews list under the card could give away the next words, even after shuffling. It now starts collapsed – click its heading to show it.</li>
+              </ul>
+              <a class="text-link" href="https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.1.1">Full release notes</a>
+            </article>
+            <article class="release-card">
+              <header>
+                <h3>Word Hunter 1.1.0</h3>
+                <p class="release-meta"><time datetime="2026-08-29">29 August 2026</time> · Feature release</p>
+              </header>
+              <ul>
+                <li><strong>World of Warcraft vocabulary.</strong> Import the words you collect in quests with the WordHunterWoW addon, with your meanings, notes and the quest sentence.</li>
+                <li><strong>Edit saved words.</strong> Correct a word without losing its progress, notes or examples.</li>
+                <li><strong>Reading comfort.</strong> Dyslexia-friendly fonts, read-aloud that follows the spoken word, and a shuffle button for today’s flashcards.</li>
+                <li><strong>Faster start.</strong> Large libraries open in about half the time.</li>
+              </ul>
+              <a class="text-link" href="https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.1.0">Full release notes</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="download" aria-labelledby="download-title">
+        <div class="container">
+          <header class="section-head">
+            <p class="eyebrow">Download</p>
+            <h2 id="download-title">Get Word Hunter <span data-version>1.1.1</span></h2>
+            <p>Free on every platform. All downloads come straight from the official <a href="https://github.com/Ironship/WordHunter/releases/tag/WordHunter1.1.1" data-release-link>GitHub release</a>.</p>
+          </header>
+
+          <div class="download-grid">
+            <article class="download-card" data-platform="windows">
+              <div class="download-head">
+                <svg class="platform-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                <div>
+                  <h3>Windows</h3>
+                  <p>Windows 10 and 11, 64-bit</p>
+                </div>
+              </div>
+              <a class="button button-primary" href="https://github.com/Ironship/WordHunter/releases/latest/download/Word.Hunter.Setup.exe">Installer (.exe)</a>
+              <a class="button button-ghost" href="https://github.com/Ironship/WordHunter/releases/latest/download/Word.Hunter.portable.zip">Portable ZIP</a>
+              <div class="commands">
+                <p>Or use a package manager:</p>
+                <div class="command"><code>winget install Ironship.WordHunter</code></div>
+                <div class="command"><code>scoop bucket add wordhunter https://github.com/Ironship/scoop-wordhunter</code></div>
+                <div class="command"><code>scoop install wordhunter/wordhunter</code></div>
+              </div>
+            </article>
+
+            <article class="download-card" data-platform="mac">
+              <div class="download-head">
+                <svg class="platform-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19.5h20"/></svg>
+                <div>
+                  <h3>macOS</h3>
+                  <p>Apple Silicon (M1 or newer)</p>
+                </div>
+              </div>
+              <a class="button button-primary" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.1/WordHunter-1.1.1-aarch64.dmg" data-asset="dmg">Disk image (.dmg)</a>
+              <details class="note">
+                <summary>Opening it the first time</summary>
+                <p>The app is not notarised by Apple. Drag it to Applications and try to open it once, then choose <strong>Open Anyway</strong> in System Settings → Privacy &amp; Security.</p>
+              </details>
+              <p class="small muted">Intel Macs are not supported.</p>
+            </article>
+
+            <article class="download-card" data-platform="linux">
+              <div class="download-head">
+                <svg class="platform-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7.5 10 12l-5 4.5M12.5 17H19"/></svg>
+                <div>
+                  <h3>Linux</h3>
+                  <p>x86_64 with WebKitGTK 4.1</p>
+                </div>
+              </div>
+              <a class="button button-primary" href="https://github.com/Ironship/WordHunter/releases/latest/download/WordHunter.flatpak">Flatpak bundle</a>
+              <div class="button-row">
+                <a class="button button-ghost" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.1/WordHunter-1.1.1-x86_64.AppImage" data-asset="appimage">AppImage</a>
+                <a class="button button-ghost" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.1/word-hunter_1.1.1_amd64.deb" data-asset="deb">DEB</a>
+              </div>
+              <div class="commands">
+                <p>Or use the <a href="https://github.com/Ironship/homebrew-wordhunter">Homebrew tap</a>:</p>
+                <div class="command"><code>brew install --cask Ironship/wordhunter/wordhunter</code></div>
+              </div>
+              <p class="small muted">Ubuntu 22.04, Debian 12, Fedora 38 or newer. Local OCR is included.</p>
+            </article>
+
+            <article class="download-card" data-platform="android">
+              <div class="download-head">
+                <svg class="platform-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
+                <div>
+                  <h3>Android</h3>
+                  <p>Word Hunter Pocket, Android 8 or newer</p>
+                </div>
+              </div>
+              <a class="button button-primary" href="https://github.com/Ironship/WordHunter/releases/latest/download/Word.Hunter.Pocket.release.apk">Download APK</a>
+              <p class="small muted">Your phone may ask you to allow installs from your browser. An <a href="https://gitlab.com/fdroid/rfp/-/work_items/4109">F&#8209;Droid listing</a> has been requested and is waiting for review.</p>
+            </article>
+          </div>
+
+          <p class="download-footnote">
+            Older versions are on the <a href="https://github.com/Ironship/WordHunter/releases">releases page</a>.
+            Package recipes for Chocolatey, Snap, AUR and Nixpkgs are in the <a href="https://github.com/Ironship/WordHunter/tree/main/packaging">repository</a> but not published in those stores yet.
           </p>
-        </aside>
+        </div>
       </section>
 
-      <section class="section screenshot-section" id="screenshots" aria-labelledby="screenshots-title">
-        <div class="section-heading">
-          <h2 id="screenshots-title">See the learning flow</h2>
-          <p>Move from library to reader, word base, flashcards, progress, and Pocket without leaving your own data behind.</p>
-        </div>
-
-        <div class="slideshow" role="region" aria-roledescription="carousel" aria-label="Word Hunter screenshots">
-          <div class="slide-frame">
-            <figure class="slide is-active" data-slide="0">
-              <img src="docs/screenshots/pc-library.png" alt="Word Hunter desktop library with import panel">
-              <figcaption>
-                <strong>Library and import</strong>
-                <span>Texts, ebooks, scanned PDFs, subtitles, and reading progress in one local workspace.</span>
-              </figcaption>
-            </figure>
-            <figure class="slide" data-slide="1">
-              <img src="docs/screenshots/pc-reader.png" alt="Word Hunter desktop reader with highlighted words and word panel">
-              <figcaption>
-                <strong>Reader with word panel</strong>
-                <span>Click a word, save context, translate, add notes, and review without breaking reading flow.</span>
-              </figcaption>
-            </figure>
-            <figure class="slide" data-slide="2">
-              <img src="docs/screenshots/pc-flashcards.png" alt="Word Hunter flashcard review">
-              <figcaption>
-                <strong>Flashcards and SRS</strong>
-                <span>Practice due words with pronunciation, reverse cards, history, and rating buttons.</span>
-              </figcaption>
-            </figure>
-            <figure class="slide" data-slide="3">
-              <img src="docs/screenshots/pocket-reader.png" alt="Word Hunter Pocket mobile reader with word panel">
-              <figcaption>
-                <strong>Word Hunter Pocket</strong>
-                <span>The same vocabulary model reshaped for Android reading and review.</span>
-              </figcaption>
-            </figure>
+      <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+        <div class="container faq-grid">
+          <header class="section-head section-head-left">
+            <p class="eyebrow">FAQ</p>
+            <h2 id="faq-title">Questions, answered</h2>
+            <p>Something else? <a href="https://github.com/Ironship/WordHunter/issues">Ask on GitHub</a>.</p>
+          </header>
+          <div class="faq">
+            <details>
+              <summary>Is Word Hunter really free?</summary>
+              <p>Yes. It is open-source software under the GNU AGPL-3.0, with no subscription, no in-app purchases and no ads.</p>
+            </details>
+            <details>
+              <summary>Do I need an account or an internet connection?</summary>
+              <p>No account at all. Reading, saving words, flashcards and desktop OCR work offline. The internet is used only for online features you choose, such as the book catalog, online translation, dictionaries or online speech.</p>
+            </details>
+            <details>
+              <summary>Where is my data stored?</summary>
+              <p>On your device. Your books, words, settings and progress never go to a Word Hunter server – there isn’t one. You can export a full backup as a ZIP file at any time. See the <a href="privacy.html">privacy policy</a>.</p>
+            </details>
+            <details>
+              <summary>How do I move my words between my computer and my phone?</summary>
+              <p>Open <strong>Export</strong>, save a transfer package and import it on the other device. It carries books, page images, words, settings and reading progress, and merges with what is already there.</p>
+            </details>
+            <details>
+              <summary>Can I keep using Anki?</summary>
+              <p>Yes. Export your words to Anki as a TSV file, or import an Anki TSV file into Word Hunter.</p>
+            </details>
+            <details>
+              <summary>Is there an iPhone or iPad version?</summary>
+              <p>Not at the moment. Word Hunter runs on Windows, macOS (Apple Silicon), Linux and Android.</p>
+            </details>
           </div>
-
-          <div class="slide-controls" role="group" aria-label="Screenshot controls">
-            <button class="icon-button" type="button" data-slide-prev aria-label="Previous screenshot">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>
-            </button>
-            <div class="slide-dots" role="group" aria-label="Choose screenshot">
-              <button type="button" class="is-active" data-slide-dot="0" aria-label="Show library screenshot"></button>
-              <button type="button" data-slide-dot="1" aria-label="Show reader screenshot"></button>
-              <button type="button" data-slide-dot="2" aria-label="Show flashcards screenshot"></button>
-              <button type="button" data-slide-dot="3" aria-label="Show Pocket screenshot"></button>
-            </div>
-            <button class="icon-button" type="button" data-slide-next aria-label="Next screenshot">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section class="section languages-section" id="languages" aria-labelledby="languages-title">
-        <div class="section-heading">
-          <h2 id="languages-title">Twelve learning profiles</h2>
-          <p>Each language has its own library, vocabulary, review queue, and progress.</p>
-        </div>
-        <div class="language-grid" role="list" aria-label="Supported learning languages">
-          <span role="listitem"><img src="src/web/flags/en.svg" alt=""> English</span>
-          <span role="listitem"><img src="src/web/flags/de.svg" alt=""> German</span>
-          <span role="listitem"><img src="src/web/flags/es.svg" alt=""> Spanish</span>
-          <span role="listitem"><img src="src/web/flags/it.svg" alt=""> Italian</span>
-          <span role="listitem"><img src="src/web/flags/fr.svg" alt=""> French</span>
-          <span role="listitem"><img src="src/web/flags/pl.svg" alt=""> Polish</span>
-          <span role="listitem"><img src="src/web/flags/uk.svg" alt=""> Ukrainian</span>
-          <span role="listitem"><img src="src/web/flags/ru.svg" alt=""> Russian</span>
-          <span role="listitem"><img src="src/web/flags/ja.svg" alt=""> Japanese</span>
-          <span role="listitem"><img src="src/web/flags/zh.svg" alt=""> Chinese</span>
-          <span role="listitem"><img src="src/web/flags/la.svg" alt=""> Latin</span>
-          <span role="listitem"><img src="src/web/flags/grc.svg" alt=""> Ancient Greek</span>
-        </div>
-      </section>
-
-      <section class="section features-section" id="features" aria-labelledby="features-title">
-        <div class="section-heading">
-          <h2 id="features-title">Built for real reading habits</h2>
-          <p>Word Hunter keeps the source material visible and turns vocabulary work into a natural part of reading.</p>
-        </div>
-        <div class="feature-grid">
-          <article>
-            <h3>PDF overlays and OCR</h3>
-            <p>PDF pages can keep their original background while selectable words, status marks, and OCR/text-layer spacing stay aligned.</p>
-          </article>
-          <article>
-            <h3>Clean text mode</h3>
-            <p>Switch PDF reading between the original page background and a focused text-only view when layout gets in the way.</p>
-          </article>
-          <article>
-            <h3>Context-first vocabulary</h3>
-            <p>Words are saved with translations, notes, examples, and the text they came from.</p>
-          </article>
-          <article>
-            <h3>Offline-friendly ownership</h3>
-            <p>No account is required. Data stays local, and sync uses a folder you choose.</p>
-          </article>
-          <article>
-            <h3>Desktop plus Android</h3>
-            <p>Do heavy importing on desktop, then read, zoom, pan, and review on Word Hunter Pocket.</p>
-          </article>
-          <article>
-            <h3>Windows, Linux, and Android</h3>
-            <p>Release builds include Windows installers and portable archives, Android APK and AAB packages, and Linux Flatpak, AppImage, and DEB bundles.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section release-section" id="release" aria-labelledby="release-title">
-        <div class="section-heading">
-          <h2 id="release-title">What's new in 1.1.0</h2>
-          <p>Vocabulary imported straight from World of Warcraft quests, editable saved words, a reading-comfort pass, and a much quicker start for large libraries.</p>
-        </div>
-        <div class="intro-grid">
-          <article>
-            <span>World of Warcraft</span>
-            <h3>Import quest vocabulary</h3>
-            <p>Read the SavedVariables file written by the WordHunterWoW addon. Words arrive with their status, your meaning, your note, and the quest sentence they came from.</p>
-          </article>
-          <article>
-            <span>Vocabulary</span>
-            <h3>Edit the word itself</h3>
-            <p>Correct a headword without losing its learning progress, note, or examples. Imported words also track how many different quests they appeared in, and when.</p>
-          </article>
-          <article>
-            <span>Speed</span>
-            <h3>A quicker start on big libraries</h3>
-            <p>Stored records used to be read and parsed several times per action. On a library of about a thousand records, starting the app roughly halved and saving a book edit did too.</p>
-          </article>
-          <article>
-            <span>Reader comfort</span>
-            <h3>Read-aloud that keeps up</h3>
-            <p>Read-aloud narration keeps the highlighted word in view, dyslexia-friendly fonts ship with the app, and deleting books shows clear progress instead of a silent wait.</p>
-          </article>
-          <article>
-            <span>Flashcard quality</span>
-            <h3>Better reverse cards</h3>
-            <p>German separable verbs such as “rief … an” are masked across the example sentence on reverse cards, and a shuffle button re-orders today’s queue at any time.</p>
-          </article>
-          <article>
-            <span>Focused discovery</span>
-            <h3>Gutenberg-first catalog</h3>
-            <p>Discovery covers Project Gutenberg, Wikipedia, and Wikinews. Only Wikisource was dropped, and anything already imported from it stays readable in your library.</p>
-          </article>
-        </div>
-      </section>
-      <section class="section download-section" id="download" aria-labelledby="download-title">
-        <div>
-          <h2 id="download-title">Word Hunter 1.1.0 is available now</h2>
-          <p>Choose the Windows installer or portable archive, the macOS Apple Silicon DMG, Word Hunter Pocket on Android, or Flatpak, AppImage, and DEB packages for Linux.</p>
-          <p>Both Linux packages bundle the local OCR runtime and models; no Syncthing or external sync service is included or required.</p>
-          <p class="channel-links">
-            Package-manager status:
-            <a href="https://github.com/Ironship/scoop-wordhunter">Scoop is available</a>,
-            the <a href="https://github.com/Ironship/homebrew-wordhunter">official Homebrew tap for Linux x86_64 is available</a>,
-            <a href="https://github.com/microsoft/winget-pkgs/tree/master/manifests/i/Ironship/WordHunter">WinGet is available</a>,
-            an <a href="https://github.com/AppImage/appimage.github.io/pull/3794">AppImageHub entry is merged but not yet listed in their catalog</a>,
-            and the
-            <a href="https://gitlab.com/fdroid/rfp/-/work_items/4109">F-Droid inclusion request is open</a>.
-            The <a href="https://github.com/Ironship/WordHunter/tree/main/packaging/chocolatey">Chocolatey</a>,
-            <a href="https://github.com/Ironship/WordHunter/tree/main/packaging/snap">Snap</a>,
-            <a href="https://github.com/Ironship/WordHunter/tree/main/packaging/aur">AUR</a>, and
-            <a href="https://github.com/Ironship/WordHunter/tree/main/packaging/nix">Nixpkgs</a>
-            recipes are prepared but are not yet published in their respective package stores.
-          </p>
-          <div class="package-install" role="group" aria-label="Install Word Hunter with Scoop">
-            <strong>Install with Scoop</strong>
-            <code>scoop bucket add wordhunter https://github.com/Ironship/scoop-wordhunter</code>
-            <code>scoop install wordhunter/wordhunter</code>
-          </div>
-          <div class="package-install" role="group" aria-label="Install Word Hunter with Homebrew on Linux x86_64">
-            <strong>Install with Homebrew on Linux x86_64 (Homebrew 5.1.12+)</strong>
-            <code>brew install --cask Ironship/wordhunter/wordhunter</code>
-          </div>
-        </div>
-        <div class="download-actions">
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/Word.Hunter.Setup.exe">Download Windows setup</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/Word.Hunter.portable.zip">Download Windows portable</a>
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/WordHunter-1.1.0-aarch64.dmg">Download macOS DMG</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/Word.Hunter.Pocket.release.apk">Download Android APK</a>
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/Word.Hunter.Pocket.release.aab">Download Android AAB</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/WordHunter.flatpak">Download Linux Flatpak</a>
-          <a class="button primary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/WordHunter-1.1.0-x86_64.AppImage">Download Linux AppImage</a>
-          <a class="button secondary-button" href="https://github.com/Ironship/WordHunter/releases/download/WordHunter1.1.0/word-hunter_1.1.0_amd64.deb">Download Linux DEB</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>Word Hunter is AGPL-3.0-or-later licensed.</span>
-      <span>
-        <a href="privacy.html">Privacy policy</a>
-        <a href="https://github.com/Ironship/WordHunter">GitHub repository</a>
-      </span>
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="src/web/favicon.svg" alt="" width="28" height="28">
+          <span>Word Hunter</span>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="https://github.com/Ironship/WordHunter">Source code</a>
+          <a href="https://github.com/Ironship/WordHunter/releases">All releases</a>
+          <a href="https://github.com/Ironship/WordHunter/issues">Report a problem</a>
+          <a href="privacy.html">Privacy policy</a>
+        </nav>
+        <p class="small muted">Free software under the GNU AGPL-3.0-or-later.</p>
+      </div>
     </footer>
 
-    <script src="site.js"></script>
+    <script src="site.js" defer></script>
   </body>
 </html>
