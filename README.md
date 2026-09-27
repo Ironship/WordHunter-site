@@ -17,9 +17,10 @@ last release by hand, so the page stays correct when the API is unavailable.
 
 For each new release:
 
-1. Replace `1.1.1` in `index.html` with the new version (fallback links and
+1. Replace `1.1.2` in `index.html` with the new version (fallback links and
    `data-version` text).
-2. Add a card for it at the top of **What's new** and keep the previous one.
+2. Add a card for it at the top of **What's new**. The grid has two columns:
+   keep the card of the latest feature release (x.y.0) next to it.
 3. If the interface changed, refresh the screenshots (below).
 
 ## Screenshots
